@@ -9,12 +9,12 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
-
+///order procuts has one user, and one user has many order_products
 model Users {
   id Int @id @default(autoincrement())
   firstName String
   lastName String
-  email String @unique
+  email String 
   password String
   address String?
   phone Int?
@@ -30,7 +30,7 @@ model Orders {
   isCart Boolean? @default(true)
   order_products Order_Products[]
   payment_details Payment_Details[]
-}
+} 
 
 model Product {
   id Int @id @default(autoincrement())
