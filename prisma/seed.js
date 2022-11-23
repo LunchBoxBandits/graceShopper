@@ -16,17 +16,20 @@ const seedDb = async () => {
 
   //seeding our product
   console.log("Creating our Product");
+  for (let i = 0; i < Products.length; i++) {
     await Promise.all(
-        Products.map(async(pro)=>{
-            return prisma.Product.create({
-                data:pro,
-            })
-        })
-    )
-
-
-
-
+      Products[i].map(async (pro) => {
+        return prisma.Product.create({
+          data: {
+            name: pro.name,
+            price: pro.price,
+            description: pro.description,
+            imageUrl: pro.imageUrl,
+          },
+        });
+      })
+    );
+  }
 };
 
 const initDb = async () => {
