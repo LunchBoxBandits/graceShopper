@@ -14,7 +14,7 @@ model Users {
   id Int @id @default(autoincrement())
   firstName String
   lastName String
-  email String 
+  email String @unique
   password String
   address String?
   phone Int?
@@ -34,20 +34,21 @@ model Orders {
 
 model Product {
   id Int @id @default(autoincrement())
-  name String
+  name String @unique
   price Int
   description String?
   imageUrl String?
-  order_products Order_Products[]
+  order_products Order_Products?
+
 }
 
 model Order_Products {
   id Int @id @default(autoincrement())
-  order_id Int?
-  product_id Int?
-orders Orders? @relation(fields: [order_id], references: [id])
-products Product? @relation(fields: [product_id], references: [id])
-@@unique([order_id, product_id])
+  order_id Int @unique
+  product_id Int @unique
+  orders Orders @relation(fields: [order_id], references: [id])
+  products Product @relation(fields: [product_id], references: [id])
+
 }
 
 model Payment_Details {
