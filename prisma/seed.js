@@ -1,6 +1,14 @@
 const prisma = require("../prisma/prisma");
 
-const { Users, Products } = require("./seedData");
+const {
+  Users,
+  Products,
+  Orders,
+  Order_Products,
+  Payment_Details,
+  Categories,
+  Gender,
+} = require("./seedData");
 
 const seedDb = async () => {
   //seeding users
@@ -12,24 +20,78 @@ const seedDb = async () => {
       });
     })
   );
-  console.log("finished doing users");
+  console.log("Finished creating users");
+
+  //seeding our Categories
+  console.log("creating Categories");
+  await Promise.all(
+    Categories.map(async (cat) => {
+      return prisma.Categories.create({
+        data: cat,
+      });
+    })
+  );
+
+  console.log("Finished creating Categories");
+
+  //seeding our Gender
+  console.log("creating Gender");
+  await Promise.all(
+    Gender.map(async (gen) => {
+      return prisma.Gender.create({
+        data: gen,
+      });
+    })
+  );
+
+  console.log("Finished creating Gender");
 
   //seeding our product
   console.log("Creating our Product");
-  for (let i = 0; i < Products.length; i++) {
-    await Promise.all(
-      Products[i].map(async (pro) => {
-        return prisma.Product.create({
-          data: {
-            name: pro.name,
-            price: pro.price,
-            description: pro.description,
-            imageUrl: pro.imageUrl,
-          },
-        });
-      })
-    );
-  }
+  await Promise.all(
+    Products.map(async (pro) => {
+      return prisma.Products.create({
+        data: pro,
+      });
+    })
+  );
+  console.log("Finished creating Product");
+
+  //seeding our Orders
+  console.log("creating Orders");
+  await Promise.all(
+    Orders.map(async (order) => {
+      return prisma.Orders.create({
+        data: order,
+      });
+    })
+  );
+
+  console.log("Finished creating Orders");
+
+  //seeding our Order_Products
+  console.log("creating our Orders_Products");
+  await Promise.all(
+    Order_Products.map(async (oP) => {
+      return prisma.Order_Products.create({
+        data: oP,
+      });
+    })
+  );
+
+  console.log("Finished creating Orders_Products");
+
+  //seeding our Payment_Details
+  console.log("creating Payment_Details");
+  await Promise.all(
+    Payment_Details.map(async (payment) => {
+      return prisma.Payment_Details.create({
+        data: payment,
+      });
+    })
+  );
+
+  console.log("Finished creating Payment_Details");
 };
 
 const initDb = async () => {

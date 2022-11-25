@@ -24,7 +24,7 @@ model Users {
 
 model Orders {
   id Int @id @default(autoincrement())
-  userId Int  
+  userId Int?  
   users Users? @relation(fields: [userId], references: [id])
   total Int 
   isCart Boolean? @default(true)
@@ -32,22 +32,27 @@ model Orders {
   payment_details Payment_Details[]
 } 
 
-model Product {
+model Products {
   id Int @id @default(autoincrement())
-  name String @unique
+  name String 
   price Int
-  description String?
-  imageUrl String?
-  order_products Order_Products?
+  description String
+  imageUrl String
+  order_products Order_Products[]
+  category_id Int?
+  gender_id Int?
+  categories Categories? @relation(fields: [category_id], references: [id])
+  gender Gender? @relation(fields: [gender_id], references: [id])
 
 }
 
 model Order_Products {
   id Int @id @default(autoincrement())
-  order_id Int @unique
-  product_id Int @unique
-  orders Orders @relation(fields: [order_id], references: [id])
-  products Product @relation(fields: [product_id], references: [id])
+  order_id Int  
+  product_id Int?
+  quantity Int? 
+  orders Orders? @relation(fields: [order_id], references: [id])
+  products Products? @relation(fields: [product_id], references: [id])
 
 }
 
@@ -57,5 +62,17 @@ model Payment_Details {
   orders Orders? @relation(fields: [order_id], references: [id])
   amount Int
   provider String
-  status Boolean 
+  // status Boolean?
 }
+
+model Categories {
+  id Int @id @default(autoincrement())
+  name String
+  product Products[]
+}
+
+model Gender {
+  id Int @id @default(autoincrement())
+  name String
+  product Products[]
+} 

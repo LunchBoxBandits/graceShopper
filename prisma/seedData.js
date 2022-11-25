@@ -33,11 +33,15 @@ const Users = [
   },
 ];
 // Mens Collection
-let Men_Beanies = [
+
+const Products = [
+  // Beanies
   {
     name: "The North Face Light Blue Beanie",
     price: 15,
     description: "soft touch to your ears keeps your ears nice and warm",
+    category_id: 1,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078934/GRACE%20SHOPPER/MEN/Beanies/The%20North%20Face%20Light%20Blue%20Beanie.jpg",
   },
@@ -45,6 +49,8 @@ let Men_Beanies = [
     name: "The North Face Yellow Beanie",
     price: 15,
     description: "soft touch to your ears keeps your ears nice and warm",
+    category_id: 1,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078932/GRACE%20SHOPPER/MEN/Beanies/The%20North%20Face%20Yellow%20Beanie.jpg",
   },
@@ -52,6 +58,8 @@ let Men_Beanies = [
     name: "The North Face Grey Beanie",
     price: 15,
     description: "soft touch to your ears keeps your ears nice and warm",
+    category_id: 1,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078791/GRACE%20SHOPPER/MEN/Beanies/The%20North%20Face%20Grey%20Beanie.jpg",
   },
@@ -59,6 +67,8 @@ let Men_Beanies = [
     name: "The North Face Dark Grey Beanie",
     price: 15,
     description: "soft touch to your ears keeps your ears nice and warm",
+    category_id: 1,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078788/GRACE%20SHOPPER/MEN/Beanies/The%20North%20Face%20Dark%20Grey%20Beanie.jpg",
   },
@@ -66,6 +76,8 @@ let Men_Beanies = [
     name: "The North Face Red Beanie",
     price: 15,
     description: "soft touch to your ears keeps your ears nice and warm",
+    category_id: 1,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078781/GRACE%20SHOPPER/MEN/Beanies/The%20North%20Face%20Red%20Beanie.jpg",
   },
@@ -73,6 +85,8 @@ let Men_Beanies = [
     name: "Brownish Tan Beanie",
     price: 5,
     description: "soft touch to your ears keeps your ears nice and warm",
+    category_id: 1,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078745/GRACE%20SHOPPER/MEN/Beanies/Brownish%20Tan%20Beanie.jpg",
   },
@@ -80,6 +94,8 @@ let Men_Beanies = [
     name: "Black Beanie",
     price: 5,
     description: "soft touch to your ears keeps your ears nice and warm",
+    category_id: 1,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078691/GRACE%20SHOPPER/MEN/Beanies/Black%20Beanie.jpg",
   },
@@ -87,6 +103,8 @@ let Men_Beanies = [
     name: "Black and Tan Beanie",
     price: 5,
     description: "soft touch to your ears keeps your ears nice and warm",
+    category_id: 1,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078667/GRACE%20SHOPPER/MEN/Beanies/Black%20and%20Tan.jpg",
   },
@@ -94,15 +112,18 @@ let Men_Beanies = [
     name: "Grannies Beanie",
     price: 14,
     description: "soft touch to your ears keeps your ears nice and warm",
+    category_id: 1,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078659/GRACE%20SHOPPER/MEN/Beanies/Grannies%20Beanie.jpg",
   },
-];
-let Men_Pants = [
+  // Pants
   {
     name: "Light White Pants",
     price: 45,
     description: "Pants with a good look",
+    category_id: 2,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079619/GRACE%20SHOPPER/MEN/Pants/Lights%20White%20Pants.jpg",
   },
@@ -110,6 +131,8 @@ let Men_Pants = [
     name: "Gray Joggers",
     price: 35,
     description: "Pants with a good look",
+    category_id: 2,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079612/GRACE%20SHOPPER/MEN/Pants/Gray%20Joggers.jpg",
   },
@@ -117,6 +140,8 @@ let Men_Pants = [
     name: "Black Sweats",
     price: 50,
     description: "Pants with a good look",
+    category_id: 2,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079608/GRACE%20SHOPPER/MEN/Pants/Black%20Sweats.jpg",
   },
@@ -124,6 +149,8 @@ let Men_Pants = [
     name: "Ripped Jeans",
     price: 60,
     description: "Pants with a good look",
+    category_id: 2,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079580/GRACE%20SHOPPER/MEN/Pants/Ripped%20Jeans.jpg",
   },
@@ -131,6 +158,8 @@ let Men_Pants = [
     name: "Black Ripped Jeans",
     price: 50,
     description: "Pants with a good look",
+    category_id: 2,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079578/GRACE%20SHOPPER/MEN/Pants/Black%20Ripped%20Jeans.jpg",
   },
@@ -138,15 +167,18 @@ let Men_Pants = [
     name: "Burgundy Jeans",
     price: 50,
     description: "Pants with a good look",
+    category_id: 2,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079566/GRACE%20SHOPPER/MEN/Pants/download_np2ozk.jpg",
   },
-];
-let Men_Underwear = [
+  // Underwear
   {
     name: "Orange Underwear",
     price: 20,
     description: "Keeps the sack nice and dry and warm",
+    category_id: 3,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078404/GRACE%20SHOPPER/MEN/Underwear/Orange%20Underwear.jpg",
   },
@@ -154,6 +186,8 @@ let Men_Underwear = [
     name: "Pinkish Underwear",
     price: 20,
     description: "Keeps the sack nice and dry and warm",
+    category_id: 3,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077802/GRACE%20SHOPPER/MEN/Underwear/Purple-Underwear.webp",
   },
@@ -161,6 +195,8 @@ let Men_Underwear = [
     name: "Red Underwear",
     price: 20,
     description: "Keeps the sack nice and dry and warm",
+    category_id: 3,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077755/GRACE%20SHOPPER/MEN/Underwear/Red%20Underwear.jpg",
   },
@@ -169,6 +205,8 @@ let Men_Underwear = [
     price: 20,
     description:
       "Keeps the sack nice and dry and warm these are not as comfortable",
+    category_id: 3,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077735/GRACE%20SHOPPER/MEN/Underwear/Blue%20Underwear.jpg",
   },
@@ -176,6 +214,8 @@ let Men_Underwear = [
     name: "BrickColor Underwear",
     price: 20,
     description: "Keeps the sack nice and dry and warm",
+    category_id: 3,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077724/GRACE%20SHOPPER/MEN/Underwear/BrickColor%20underwear.jpg",
   },
@@ -183,6 +223,8 @@ let Men_Underwear = [
     name: "Black Underwear",
     price: 20,
     description: "Keeps the sack nice and dry and warm",
+    category_id: 3,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077555/GRACE%20SHOPPER/MEN/Underwear/Black%20Underwear.webp",
   },
@@ -190,15 +232,18 @@ let Men_Underwear = [
     name: "White UnderWear",
     price: 30,
     description: "poop stains are very visible",
+    category_id: 3,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077469/GRACE%20SHOPPER/MEN/Underwear/White%20Underwear.webp",
   },
-];
-let Men_Shorts = [
+  // Shorts
   {
     name: "Grey Running Shorts",
     price: 125,
     description: "good for the summer",
+    category_id: 4,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084235/GRACE%20SHOPPER/MEN/shorts/203028493-1-stone_mvuxb6.jpg",
   },
@@ -206,6 +251,8 @@ let Men_Shorts = [
     name: "Light Grey Shorts",
     price: 125,
     description: "good for the summer",
+    category_id: 4,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084230/GRACE%20SHOPPER/MEN/shorts/201312553-1-greyheather_gdqr0s.jpg",
   },
@@ -213,6 +260,8 @@ let Men_Shorts = [
     name: "Black shorts",
     price: 125,
     description: "good for the summer",
+    category_id: 4,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084221/GRACE%20SHOPPER/MEN/shorts/201312546-1-black_jf5yhm.webp",
   },
@@ -220,6 +269,8 @@ let Men_Shorts = [
     name: "Nike Black Shorts",
     price: 45,
     description: "Pants with a good look",
+    category_id: 4,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084216/GRACE%20SHOPPER/MEN/shorts/201312731-1-black_aepei4.webp",
   },
@@ -227,22 +278,27 @@ let Men_Shorts = [
     name: "Light Pink Shorts",
     price: 45,
     description: "Pants with a good look",
+    category_id: 4,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084214/GRACE%20SHOPPER/MEN/shorts/201710967-1-pastellilac_wmfi5x.webp",
   },
   {
-    name: "GinerBread Shorts",
+    name: "GingerBread Shorts",
     price: 45,
     description: "Pants with a good look",
+    category_id: 4,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084208/GRACE%20SHOPPER/MEN/shorts/203608679-1-green_sgcmhw.webp",
   },
-];
-let Men_Hoodies_and_Sweaters = [
+  // Sweater
   {
     name: "Blue Sweater",
     price: 35,
     description: "good to keep you warm the color is blue",
+    category_id: 5,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084377/GRACE%20SHOPPER/MEN/Hoodies%20and%20Sweaters/hmgoepprod_pjyjov.jpg",
   },
@@ -250,6 +306,8 @@ let Men_Hoodies_and_Sweaters = [
     name: "green Sweater",
     price: 35,
     description: "good to keep you warm the color is green",
+    category_id: 5,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084373/GRACE%20SHOPPER/MEN/Hoodies%20and%20Sweaters/hmgoepprod_dd72kn.jpg",
   },
@@ -257,6 +315,8 @@ let Men_Hoodies_and_Sweaters = [
     name: "Grey Sweater",
     price: 35,
     description: "good to keep you warm the color is grey",
+    category_id: 5,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084370/GRACE%20SHOPPER/MEN/Hoodies%20and%20Sweaters/hmgoepprod_b6yp4o.jpg",
   },
@@ -264,6 +324,8 @@ let Men_Hoodies_and_Sweaters = [
     name: "Red Sweater",
     price: 35,
     description: "good to keep you warm the color is red",
+    category_id: 5,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084366/GRACE%20SHOPPER/MEN/Hoodies%20and%20Sweaters/hmgoepprod_sl6yvs.jpg",
   },
@@ -271,6 +333,8 @@ let Men_Hoodies_and_Sweaters = [
     name: "Another Grey Sweater",
     price: 35,
     description: "good to keep you warm the color is grey",
+    category_id: 5,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084363/GRACE%20SHOPPER/MEN/Hoodies%20and%20Sweaters/hmgoepprod_iamsau.jpg",
   },
@@ -278,6 +342,8 @@ let Men_Hoodies_and_Sweaters = [
     name: "White Sweater",
     price: 35,
     description: "good to keep you warm the color is blue",
+    category_id: 5,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084359/GRACE%20SHOPPER/MEN/Hoodies%20and%20Sweaters/hmgoepprod_yh44fu.jpg",
   },
@@ -285,15 +351,18 @@ let Men_Hoodies_and_Sweaters = [
     name: "Black Sweater",
     price: 35,
     description: "good to keep you warm the color is blue",
+    category_id: 5,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084356/GRACE%20SHOPPER/MEN/Hoodies%20and%20Sweaters/hmgoepprod_zroom8.jpg",
   },
-];
-let Men_Hats = [
+  // Cap
   {
     name: "The Wave Black Cap",
     price: 20,
     description: "just a black hat lol",
+    category_id: 6,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669083566/GRACE%20SHOPPER/MEN/Hats/The%20Wave%20Black%20Cap.webp",
   },
@@ -301,6 +370,8 @@ let Men_Hats = [
     name: "Astro Pink Cap",
     price: 20,
     description: "cool hat i guess",
+    category_id: 6,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669083531/GRACE%20SHOPPER/MEN/Hats/ASTRO%20PINK%20HAT.webp",
   },
@@ -308,6 +379,8 @@ let Men_Hats = [
     name: "Astro White Cap",
     price: 20,
     description: "pink cool hat lol",
+    category_id: 6,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669083522/GRACE%20SHOPPER/MEN/Hats/ASTRO%20WHITE%20HAT.webp",
   },
@@ -315,6 +388,8 @@ let Men_Hats = [
     name: "Astro Black Cap",
     price: 20,
     description: "hola",
+    category_id: 6,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669083516/GRACE%20SHOPPER/MEN/Hats/ASTRO%20BLACK%20HAT.webp",
   },
@@ -322,15 +397,18 @@ let Men_Hats = [
     name: "Astro Beige Cap",
     price: 20,
     description: "Beige i guess",
+    category_id: 6,
+    gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669083506/GRACE%20SHOPPER/MEN/Hats/ASTRO%20BEIGE%20HAT.jpg",
   },
-];
-let Men_TShirts = [
+  // Shirts
   {
     name: "Green Shirt",
     price: 15,
     description: "nice looking shirt",
+    category_id: 7,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084428/GRACE%20SHOPPER/MEN/T-Shirts%20and%20Tops/hmgoepprod_xlbwep.jpg",
   },
@@ -338,6 +416,8 @@ let Men_TShirts = [
     name: "Blue Grey Shirt",
     price: 15,
     description: "nice looking shirt",
+    category_id: 7,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084425/GRACE%20SHOPPER/MEN/T-Shirts%20and%20Tops/hmgoepprod_hg17vs.jpg",
   },
@@ -345,6 +425,8 @@ let Men_TShirts = [
     name: "Grey Shirt",
     price: 15,
     description: "nice looking shirt",
+    category_id: 7,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084415/GRACE%20SHOPPER/MEN/T-Shirts%20and%20Tops/hmgoepprod_hekbcl.jpg",
   },
@@ -352,6 +434,8 @@ let Men_TShirts = [
     name: "Black Shirt",
     price: 15,
     description: "nice looking shirt",
+    category_id: 7,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084412/GRACE%20SHOPPER/MEN/T-Shirts%20and%20Tops/hmgoepprod_io051e.jpg",
   },
@@ -359,21 +443,102 @@ let Men_TShirts = [
     name: "White Shirt",
     price: 15,
     description: "nice looking shirt",
+    category_id: 7,
+    gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084409/GRACE%20SHOPPER/MEN/T-Shirts%20and%20Tops/hmgoepprod_acwuxt.jpg",
   },
 ];
-const Products = [
-  Men_Beanies,
-  Men_Pants,
-  Men_Underwear,
-  Men_Hats,
-  Men_Shorts,
-  Men_Hoodies_and_Sweaters,
-  Men_TShirts,
+
+const Categories = [
+  {
+    id: 1,
+    name: "Beanies",
+  },
+  {
+    id: 2,
+    name: "Pants",
+  },
+  {
+    id: 3,
+    name: "Underwear",
+  },
+  {
+    id: 4,
+    name: "Shorts",
+  },
+  {
+    id: 5,
+    name: "Hoodies_and_Sweaters",
+  },
+  {
+    id: 6,
+    name: "Hats",
+  },
+  {
+    id: 7,
+    name: "Tshirts",
+  },
+];
+
+const Gender = [
+  {
+    id: 1,
+    name: "Male",
+  },
+  {
+    id: 2,
+    name: "Female",
+  },
+  {
+    id: 3,
+    name: "Unisex",
+  },
+];
+
+const Orders = [
+  {
+    userId: 4,
+    total: 20,
+  },
+  {
+    userId: 3,
+    total: 500,
+  },
+];
+const Order_Products = [
+  {
+    order_id: 1,
+    product_id: 1,
+  },
+  {
+    order_id: 1,
+    product_id: 2,
+  },
+  {
+    order_id: 1,
+    product_id: 3,
+  },
+  {
+    order_id: 2,
+    product_id: 4,
+  },
+];
+
+const Payment_Details = [
+  {
+    order_id: 1,
+    amount: 2000,
+    provider: "Chase",
+  },
 ];
 
 module.exports = {
   Users,
   Products,
+  Orders,
+  Categories,
+  Gender,
+  Order_Products,
+  Payment_Details,
 };
