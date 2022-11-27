@@ -1,12 +1,17 @@
+require("dotenv").config();
 const express = require("express");
 const path = require("path");
 
 const app = express();
 const morgan = require("morgan");
+const cookieParser = require("cookie-parser");
+const { COOKIE_SECRET } = process.env;
 
+// Middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(morgan("dev"));
+app.use(cookieParser(COOKIE_SECRET));
 app.use(express.static(path.join(__dirname, "./client", "dist")));
 
 app.get("/health", (req, res) => {
@@ -21,7 +26,7 @@ app.use((req, res, next) => {
 });
 
 app.use((error, req, res, next) => {
-  res.satus(500).send(error);
+  res.status(500).send(error);
 });
 
 module.exports = app;
