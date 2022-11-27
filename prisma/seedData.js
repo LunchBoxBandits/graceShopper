@@ -5,7 +5,7 @@ const Users = [
     email: "thisisatestemail@gmail.com",
     password: "12345",
     address: "7668 Sunset St.Los Angeles, CA 90066",
-    phone: 269 - 290 - 2565,
+    phone: "269 - 290 - 2565",
   },
   {
     firstName: "Ugo",
@@ -13,7 +13,7 @@ const Users = [
     email: "dfsadjfksd@gmail.com",
     password: "6789",
     address: "52 Carson St.Alameda, CA 94501",
-    phone: 512 - 452 - 1803,
+    phone: "512 - 452 - 1803",
   },
   {
     firstName: "Wilson",
@@ -21,7 +21,7 @@ const Users = [
     email: "chenischess@gmail.com",
     password: "thisAlsoTest",
     address: "755 New Road London WC19 5EJ",
-    phone: 256 - 763 - 1664,
+    phone: "256 - 763 - 1664",
   },
   {
     firstName: "Goated",
@@ -29,7 +29,7 @@ const Users = [
     email: "goatedPoke12@gmail.com",
     password: "asdf",
     address: "2 Shady Drive Thompson, MB R8N 7N5",
-    phone: 606 - 507 - 6259,
+    phone: "606 - 507 - 6259",
   },
 ];
 // Mens Collection
