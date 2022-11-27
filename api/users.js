@@ -105,6 +105,7 @@ router.patch(
   })
 );
 //GET /api/users/me/order
+// it cant identify products yet I believe because I do dont have any products added with my new email - Wilson
 router.get(
   "/me/order",
   authRequired,
