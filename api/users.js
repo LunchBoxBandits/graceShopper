@@ -88,6 +88,8 @@ router.get(
 );
 
 //PATCH /api/users/me
+
+// do not change password it removes the bcrypt and you cant log in after that
 router.patch(
   "/me",
   authRequired,
@@ -102,4 +104,21 @@ router.patch(
     res.send(updateUser);
   })
 );
+//GET /api/users/me/order
+router.get(
+  "/me/order",
+  authRequired,
+  asyncErrorHandler(async (req, res, next) => {
+    const order = await prisma.orders.findMany({
+      where: { id: req.user.id },
+      include: {
+        order_products: {
+          include: { products },
+        },
+      },
+    });
+    res.send(order);
+  })
+);
+
 module.exports = router;
