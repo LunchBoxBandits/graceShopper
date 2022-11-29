@@ -12,5 +12,4 @@ router.get(
 );
 
 //get //api/id
-
 module.exports = router;
