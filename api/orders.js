@@ -48,6 +48,8 @@ router.post(
   })
 );
 
+//add product to order
+
 //PATCH localhost:5000/api/orders/updateOrder
 
 router.patch(

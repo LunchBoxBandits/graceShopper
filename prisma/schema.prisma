@@ -26,7 +26,7 @@ model Orders {
   id Int @id @default(autoincrement())
   userId Int?  
   users Users? @relation(fields: [userId], references: [id])
-  total Int 
+  total Int? 
   isCart Boolean? @default(true)
   order_products Order_Products[]
   payment_details Payment_Details[]
@@ -50,7 +50,7 @@ model Order_Products {
   id Int @id @default(autoincrement())
   order_id Int  
   product_id Int?
-  quantity Int? 
+  quantity Int?
   orders Orders? @relation(fields: [order_id], references: [id])
   products Products? @relation(fields: [product_id], references: [id])
 
