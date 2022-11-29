@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { asyncErrorHandler } = require("./utils");
+const { asyncErrorHandler, authRequired } = require("./utils");
 const prisma = require("../prisma/prisma");
 
 //Getting order_products \
@@ -18,14 +18,34 @@ router.get(
 router.post(
   "/:order_id/:product_id",
   asyncErrorHandler(async (req, res, next) => {
-    const { order_id, product_id } = req.params;
+    // const { order_id, product_id} = req.params;
+    const { order_id, product_id, quantity } = req.body;
     const oP = await prisma.order_Products.create({
       data: {
         order_id: +order_id,
         product_id: +product_id,
+        quantity: +quantity,
       },
     });
     res.send(oP);
+  })
+);
+
+///PATCH / api/order_prodcuts/:order_id/:product_id
+//updating the quantity
+router.patch(
+  "/:order_id/:product_id",
+  asyncErrorHandler(async (req, res, next) => {
+    const { quantity } = req.body;
+    const {order_id, product_id} = req.params;
+    const updateOrderProducts = await prisma.order_Products.update({
+      where: {
+        order_id: +order_id,
+        product_id:+product_id
+      },
+      data: {quantity: +quantity},
+    });
+    res.send(updateOrderProducts)
   })
 );
 
