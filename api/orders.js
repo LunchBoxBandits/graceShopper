@@ -39,7 +39,7 @@ router.get(
 );
 //POST localhost:5000/api/orders/ createOrder
 router.post(
-  "/createOrder",
+  "/",
   asyncErrorHandler(async (req, res, next) => {
     const createOrder = await prisma.orders.create({
       data: req.body,
