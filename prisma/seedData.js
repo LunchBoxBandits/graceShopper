@@ -6,6 +6,7 @@ const Users = [
     password: "12345",
     address: "7668 Sunset St.Los Angeles, CA 90066",
     phone: "269 - 290 - 2565",
+    isAdmin: false
   },
   {
     firstName: "Ugo",
@@ -14,6 +15,7 @@ const Users = [
     password: "6789",
     address: "52 Carson St.Alameda, CA 94501",
     phone: "512 - 452 - 1803",
+    isAdmin: false
   },
   {
     firstName: "Wilson",
@@ -22,6 +24,7 @@ const Users = [
     password: "thisAlsoTest",
     address: "755 New Road London WC19 5EJ",
     phone: "256 - 763 - 1664",
+    isAdmin: false, 
   },
   {
     firstName: "Goated",
@@ -30,6 +33,7 @@ const Users = [
     password: "asdf",
     address: "2 Shady Drive Thompson, MB R8N 7N5",
     phone: "606 - 507 - 6259",
+    isAdmin: false,
   },
 ];
 // Mens Collection
@@ -534,6 +538,10 @@ const Payment_Details = [
     order_id: 1,
     amount: 2000,
     provider: "Chase",
+    nameOnCard: "ferni",
+    cardNumber: "2222405343248877",
+    experationDate: "12/32",
+    cvc:234
   },
 ];
 

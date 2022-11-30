@@ -17,6 +17,7 @@ model Users {
   email String @unique
   password String
   address String?
+  isAdmin Boolean @default(false)
   phone String?
   orders Orders[]
 
@@ -60,6 +61,10 @@ model Payment_Details {
   id Int @id @default(autoincrement())
   order_id Int?
   orders Orders? @relation(fields: [order_id], references: [id])
+  nameOnCard String
+  cardNumber String
+  experationDate String 
+  cvc Int 
   amount Int
   provider String
 }

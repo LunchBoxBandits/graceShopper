@@ -10,6 +10,18 @@ router.get(
     res.send(products);
   })
 );
-
 //get //api/id
+
+router.get(
+  "/:productId",
+  asyncErrorHandler(async (req, res, next) => {
+    const productById = await prisma.products.findUnique({
+      where: {
+        id: +req.params.productId,
+      },
+    });
+    res.send(productById);
+  })
+);
+
 module.exports = router;

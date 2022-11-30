@@ -15,7 +15,7 @@ const seedDb = async () => {
   console.log("creating Users");
   await Promise.all(
     Users.map(async (user) => {
-      return prisma.Users.create({
+      return prisma.users.create({
         data: user,
       });
     })
