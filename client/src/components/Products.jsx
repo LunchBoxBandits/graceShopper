@@ -10,14 +10,9 @@ export default function Products() {
   }, []);
   console.log(products)
   return (
-    <div>
-      <h2>products</h2>
+    <div >
       {products.map((product)=>{
-        return(
-          <div>
-            <h3>{product.name}</h3>
-          </div>
-        )
+        return <ProductCard product={product}/>
       })}
 
     </div>
