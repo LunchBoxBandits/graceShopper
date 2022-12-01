@@ -6,15 +6,15 @@ export default function useProducts() {
     (actions) => actions.products.fetchProducts
   );
 
-  const product = useStoreState((state) => state.products.product);
-  const fetchProduct = useStoreActions(
-    (actions) => actions.puppies.fetchProduct
-  );
+  // const product = useStoreState((state) => state.products.product);
+  // const fetchProduct = useStoreActions(
+  //   (actions) => actions.puppies.fetchProduct
+  // );
 
   return {
     products,
     fetchProducts,
-    product,
-    fetchProduct,
+    // product,
+    // fetchProduct,
   };
 }

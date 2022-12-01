@@ -6,7 +6,7 @@ import axios from "axios";
 export const products = {
   data: [],
   selectedProduct: {},
-  setProduct: action((state, payload) => {
+  setProducts: action((state, payload) => {
     state.data = payload;
   }),
   fetchProducts: thunk(async (actions, payload) => {
