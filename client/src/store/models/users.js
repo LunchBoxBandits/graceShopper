@@ -31,4 +31,8 @@ export const users = {
     const { data } = await axios.get("/api/user/me/cart");
     actions.selectedUser(data);
   }),
+  myOrders: thunk(async (actions, payload) => {
+    const { data } = await axios.get("/api/users/myOrders");
+    actions.selectedUser(data);
+  }),
 };

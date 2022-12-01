@@ -8,7 +8,7 @@ export default function useProducts() {
 
   // const product = useStoreState((state) => state.products.product);
   // const fetchProduct = useStoreActions(
-  //   (actions) => actions.puppies.fetchProduct
+  //   (actions) => actions.product.fetchProduct
   // );
 
   return {
