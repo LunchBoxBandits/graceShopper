@@ -13,10 +13,10 @@ router.get(
     res.send(orderProd);
   })
 );
-//POST /api/order_products/:order_id/:product_id
+//POST /api/order_products/
 // adding a product to an order
 router.post(
-  "/:order_id/:product_id",
+  "/",
   asyncErrorHandler(async (req, res, next) => {
     // const { order_id, product_id} = req.params;
     const { order_id, product_id, quantity } = req.body;
@@ -36,12 +36,22 @@ router.post(
 router.patch(
   "/:order_id/:product_id",
   asyncErrorHandler(async (req, res, next) => {
+    const { product_id, order_id } = req.params;
     const { quantity } = req.body;
-    const { product_id } = req.params;
+    
     const updateOrderProducts = await prisma.order_Products.update({
-      where: { id: +product_id },
-
-      data: { quantity: +quantity },
+      where: {
+        order_id_product_id: {
+          order_id: +order_id,
+          product_id: +product_id
+        },
+      },
+      data: {
+        order_id: +order_id,
+        product_id: +product_id,
+        quantity: quantity,
+      },
+      
     });
     res.send(updateOrderProducts);
   })
@@ -55,9 +65,14 @@ router.delete(
   asyncErrorHandler(async (req, res, next) => {
     const { order_id, product_id } = req.params;
     const oP = await prisma.order_Products.delete({
-      where: { order_id: +order_id },
-      where: { product_id: +product_id },
+      where: {
+        order_id_product_id: {
+          order_id: +order_id,
+          product_id: +product_id,
+        },
+      },
     });
+    res.send(oP);
   })
 );
 
