@@ -9,7 +9,7 @@ export default function User() {
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
-  const navigate = useNavigate;
+  const navigate = useNavigate();
   const [error, setError] = useState("");
 
   const { RegisterUser, LoginUser } = useUsers();
@@ -22,17 +22,22 @@ export default function User() {
 
           let result;
           if (method === "register") {
-            result = await RegisterUser(email, password, firstName, lastName);
+            result = await RegisterUser({
+              email,
+              password,
+              firstName,
+              lastName,
+            });
           }
 
           if (method === "login") {
-            result = await LoginUser(email, password);
+            result = await LoginUser({ email, password });
           }
           console.log("Login/Register result", result);
-          if (result.user) {
+          if (result) {
             setPassword("");
             setEmail("");
-            fetchCart();
+            // fetchCart();
             navigate("/");
           } else {
             setError(result.message);
