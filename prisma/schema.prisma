@@ -54,6 +54,7 @@ model Order_Products {
   quantity Int
   orders Orders? @relation(fields: [order_id], references: [id])
   products Products? @relation(fields: [product_id], references: [id])
+  @@unique([order_id, product_id])
 
 }
 
