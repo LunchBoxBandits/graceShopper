@@ -125,10 +125,10 @@ router.get(
   authRequired,
   asyncErrorHandler(async (req, res, next) => {
     const cart = await prisma.orders.findUnique({
-      where: { id: req.user.id },
+      where: { userId: req.user.id },
       include: {
         order_products: {
-          include: { products },
+          include: { products: true },
         },
       },
     });
