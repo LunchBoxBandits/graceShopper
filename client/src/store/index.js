@@ -1,7 +1,8 @@
 import { createStore } from "easy-peasy";
-import { products } from "./models/products";
+import { products, users } from "./models";
 
 const store = createStore({
   products,
+  users,
 });
 export default store;
