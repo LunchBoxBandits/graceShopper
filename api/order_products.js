@@ -13,7 +13,7 @@ router.get(
     res.send(orderProd);
   })
 );
-//POST /api/order_products/:order_id/:product_id
+//POST /api/order_products/
 // adding a product to an order
 router.post(
   "/",
@@ -36,23 +36,20 @@ router.post(
 router.patch(
   "/:order_id/:product_id",
   asyncErrorHandler(async (req, res, next) => {
+    const { product_id, order_id } = req.params;
     const { quantity } = req.body;
-    const { order_id, product_id } = req.params;
-    //const updateOrderProducts = await prisma.order_Products.update({
-    //   where: { id: +product_id },
-
-    //   data: { quantity: +quantity },
-    // });
-    // res.send(updateOrderProducts);
-    const updatedOP = await prisma.order_Products.update({
+ 
+    const updateOrderProducts = await prisma.order_Products.update({
       where: {
         order_id_product_id: {
           order_id: +order_id,
-          product_id: +product_id,
+          product_id: +product_id
         },
       },
       data: {
-        quantity: +quantity,
+        order_id: +order_id,
+        product_id: +product_id,
+        quantity: quantity,
       },
     });
     res.send(updatedOP);

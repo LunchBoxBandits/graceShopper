@@ -23,6 +23,9 @@ router.post(
     const user = await prisma.users.create({
       data: { email, password: hashedPassword, firstName, lastName },
     });
+
+    // Create A Cart => Use the user.id for the order's userId, make sure isCart = true
+
     console.log("This is the user in register route:", user);
     delete user.password;
     const token = jwt.sign(user, process.env.JWT_SECRET);
@@ -46,6 +49,8 @@ router.post(
     const user = await prisma.users.findUnique({
       where: { email: email },
     });
+    // check is there is / isnt a user created
+    // if there isn't a user, maybe send a error saying, no use exists
     const validPassword = await bcrypt.compare(password, user.password);
     if (validPassword) {
       const token = jwt.sign(user, process.env.JWT_SECRET);
@@ -104,14 +109,14 @@ router.patch(
     res.send(updateUser);
   })
 );
-//GET /api/users/me/order
-// it cant identify products yet I believe because I do dont have any products added with my new email - Wilson
+//GET /api/users/me/cart
+// this endpoint will fetch a user's cart (active order)
 router.get(
-  "/me/order",
+  "/me/cart",
   authRequired,
   asyncErrorHandler(async (req, res, next) => {
-    const order = await prisma.orders.findMany({
-      where: { id: req.user.id },
+    const order = await prisma.orders.findUnique({
+      where: { id: req.user.id, isCart: true },
       include: {
         order_products: {
           include: { products },
@@ -119,6 +124,26 @@ router.get(
       },
     });
     res.send(order);
+  })
+);
+
+//GET /api/users/myOrders
+// This route currently gets all orders for the logged in user!
+router.get(
+  "/myOrders",
+  authRequired,
+  asyncErrorHandler(async (req, res, next) => {
+    const cart = await prisma.orders.findMany({
+      where: { userId: req.user.id },
+      include: {
+        order_products: {
+          include: {
+            products: true,
+          },
+        },
+      },
+    });
+    res.send(cart);
   })
 );
 

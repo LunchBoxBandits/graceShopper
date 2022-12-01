@@ -19,24 +19,6 @@ router.get(
   })
 );
 
-//GET /api/orders/cart
-router.get(
-  "/cart",
-  authRequired,
-  asyncErrorHandler(async (req, res, next) => {
-    const cart = await prisma.orders.findMany({
-      where: { userId: req.user.id },
-      include: {
-        order_products: {
-          include: {
-            products: true,
-          },
-        },
-      },
-    });
-    res.send(cart);
-  })
-);
 //POST localhost:5000/api/orders/ createOrder
 router.post(
   "/",
