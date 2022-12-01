@@ -1,4 +1,5 @@
 const router = require("express").Router();
+
 const { asyncErrorHandler } = require("./utils");
 const prisma = require("../prisma/prisma");
 const bcrypt = require("bcrypt");
@@ -23,8 +24,16 @@ router.post(
     const user = await prisma.users.create({
       data: { email, password: hashedPassword, firstName, lastName },
     });
-
+    console.log("This is my user.id:", user.id);
     // Create A Cart => Use the user.id for the order's userId, make sure isCart = true
+
+    const cart = await prisma.orders.create({
+      data: {
+        userId: user.id,
+        total: 0,
+        isCart: true,
+      },
+    });
 
     console.log("This is the user in register route:", user);
     delete user.password;
@@ -78,7 +87,7 @@ router.get(
     console.log("This is the req.user in the GET Me", req.user);
   })
 );
-
+//Admin Powers ACTIVATE
 //GET /api/users/:userId
 router.get(
   "/:userId",
@@ -115,15 +124,15 @@ router.get(
   "/me/cart",
   authRequired,
   asyncErrorHandler(async (req, res, next) => {
-    const order = await prisma.orders.findUnique({
-      where: { id: req.user.id, isCart: true },
+    const cart = await prisma.orders.findUnique({
+      where: { id: req.user.id },
       include: {
         order_products: {
           include: { products },
         },
       },
     });
-    res.send(order);
+    res.send(cart);
   })
 );
 
