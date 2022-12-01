@@ -1,11 +1,25 @@
-import React from "react";
 import { useEffect } from "react";
+import useProducts from "../hooks/useProduct";
+import ProductCard from "./ProductCard";
 
 export default function Products() {
+  const { products, fetchProducts } = useProducts();
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+  console.log(products)
   return (
     <div>
-      <h1>Products</h1>
-      <h6> wilson here testing if github says its me or root commiting</h6>
+      <h2>products</h2>
+      {products.map((product)=>{
+        return(
+          <div>
+            <h3>{product.name}</h3>
+          </div>
+        )
+      })}
+
     </div>
   );
 }

@@ -1,21 +1,16 @@
-import { StoreProvider } from "easy-peasy";
-import {useStoreState, useStoreActions} from "easy-peasy";
 import React from "react";
-import store from "./store";
+import Products from "./components/Products"
+import {Routes, Route} from "react-router-dom"
 
-ReactDOM.createRoot(document.getElementById("root")).render(
-  <React.StrictMode>
-    <StoreProvider store={store}>
-      <App />
-    </StoreProvider>
-  </React.StrictMode>
-);
+function App(){
+    return(
+        <div>
+           <Routes>
+            <Route path ="/" element={< Products/>}/>
+           </Routes>
+        </div>
+    )
+};
 
-// function App() {
-
-//   return (
-
-//   )
-// }
 
 export default App;
