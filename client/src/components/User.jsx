@@ -7,11 +7,12 @@ export default function User() {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
   const navigate = useNavigate;
   const [error, setError] = useState("");
 
-  const { register, fetchRegister, login, fetchLogin, cart, fetchCart } =
-    useUsers();
+  const { RegisterUser, LoginUser } = useUsers();
 
   return (
     <>
@@ -21,11 +22,11 @@ export default function User() {
 
           let result;
           if (method === "register") {
-            result = await fetchRegister(email, password);
+            result = await RegisterUser(email, password, firstName, lastName);
           }
 
           if (method === "login") {
-            result = await fetchLogin(email, password);
+            result = await LoginUser(email, password);
           }
           console.log("Login/Register result", result);
           if (result.user) {
@@ -40,8 +41,8 @@ export default function User() {
       >
         {error && <h5>{error}</h5>}
         <input
-          value={Email}
-          onChange={(e) => setUsername(e.target.value)}
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
           type="text"
           placeholder="Email"
         />
@@ -51,7 +52,21 @@ export default function User() {
           type="text"
           placeholder="password"
         />
-        <button variant="warning" type="submit">
+
+        <input
+          value={firstName}
+          onChange={(e) => setFirstName(e.target.value)}
+          type="text"
+          placeholder="First Name"
+        />
+        <input
+          value={lastName}
+          onChange={(e) => setLastName(e.target.value)}
+          type="text"
+          placeholder="Last Name"
+        />
+
+        <button type="submit">
           {method === "register" ? "Register" : "Login"}
         </button>
       </form>
