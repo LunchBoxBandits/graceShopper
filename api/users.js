@@ -20,6 +20,15 @@ router.post(
   "/register",
   asyncErrorHandler(async (req, res, next) => {
     const { email, password, firstName, lastName } = req.body;
+    const UserExists = await prisma.users.findUnique({
+      where: { email: email },
+    });
+    if (UserExists) {
+      next({
+        name: "UserAlreadyExists",
+        message: "This email is already registered, please use another email",
+      });
+    }
     const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
     const user = await prisma.users.create({
       data: { email, password: hashedPassword, firstName, lastName },
@@ -142,7 +151,7 @@ router.get(
   "/myOrders",
   authRequired,
   asyncErrorHandler(async (req, res, next) => {
-    const cart = await prisma.orders.findMany({
+    const orderHistory = await prisma.orders.findMany({
       where: { userId: req.user.id },
       include: {
         order_products: {
@@ -152,7 +161,7 @@ router.get(
         },
       },
     });
-    res.send(cart);
+    res.send(orderHistory);
   })
 );
 
