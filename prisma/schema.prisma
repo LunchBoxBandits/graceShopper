@@ -25,7 +25,7 @@ model Users {
 
 model Orders {
   id Int @id @default(autoincrement())
-  userId Int?  
+  userId Int? @unique 
   users Users? @relation(fields: [userId], references: [id])
   total Int? 
   isCart Boolean? @default(true)
