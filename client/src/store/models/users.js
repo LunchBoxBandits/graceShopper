@@ -8,11 +8,11 @@ export const users = {
     state.data = payload;
   }),
   register: thunk(async (actions, payload) => {
-    const { data } = await axios.post("/api/users/register");
+    const { data } = await axios.post("/api/users/register", payload);
     actions.addUser(data);
   }),
   login: thunk(async (actions, payload) => {
-    const { data } = await axios.post("/api/users/login");
+    const { data } = await axios.post("/api/users/login", payload);
     actions.addUser(data);
   }),
   fetchUsers: thunk(async (actions, payload) => {

@@ -2,6 +2,8 @@ import { useStoreState, useStoreActions } from "easy-peasy";
 
 export default function useUsers() {
   // const users = useStoreState((state) => state.users.data);
+
+  //ADMIN power
   // const fetchUsers = useStoreActions((actions) => actions.users.fetchUsers);
 
   // const user = useStoreState((state) => state.user.data);
@@ -26,8 +28,8 @@ export default function useUsers() {
   //   (actions) => actions.myOrder.fetchMyOrder
   // );
   const users = useStoreState((state) => state.users.data);
-  const RegisterUser = useStoreActions((actions) => actions.users.RegisterUser);
-  const LoginUser = useStoreActions((actions) => actions.users.LoginUser);
+  const RegisterUser = useStoreActions((actions) => actions.users.register);
+  const LoginUser = useStoreActions((actions) => actions.users.login);
 
   return {
     users,
