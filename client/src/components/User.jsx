@@ -4,7 +4,6 @@ import useUsers from "../hooks/useUsers";
 
 export default function User() {
   const { method } = useParams();
-
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [firstName, setFirstName] = useState("");
@@ -19,7 +18,6 @@ export default function User() {
       <form
         onSubmit={async (event) => {
           event.preventDefault();
-
           let result;
           if (method === "register") {
             result = await RegisterUser({

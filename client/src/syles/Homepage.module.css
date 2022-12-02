@@ -1,0 +1,35 @@
+.sepImgWord {
+  display: flex;
+  margin-top:5%;
+  margin-left:1%;
+}
+.manPic {
+  width: 30em;
+  height: 80%;
+}
+
+.text{
+    margin-top: 12em;
+    margin-left:20%;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    word-spacing: 1mm;
+
+}
+
+.title {
+  color: yellow;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bolder;
+}
+
+.shopButton{
+    font-weight: bolder;
+    margin-top: 15em;
+    height: 4rem;
+    width:8em;
+
+}
