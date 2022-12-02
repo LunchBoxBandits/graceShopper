@@ -17,6 +17,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.16",
     "@prisma/client": "^4.6.1",
     "@vitejs/plugin-react": "^2.2.0",
     "axios": "^1.2.0",
