@@ -9,7 +9,6 @@ export default function Products() {
   useEffect(() => {
     fetchProducts();
   }, []);
-  console.log(products)
   return (
     <div className={styles.card}>
       {products.map((product)=>{
