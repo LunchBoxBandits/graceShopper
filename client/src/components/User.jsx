@@ -20,25 +20,33 @@ export default function User() {
           event.preventDefault();
           let result;
           if (method === "register") {
-            result = await RegisterUser({
-              email,
-              password,
-              firstName,
-              lastName,
-            });
+            try {
+              result = await RegisterUser({
+                email,
+                password,
+                firstName,
+                lastName,
+              });
+            } catch (err) {
+              setError(err.response.data.message);
+            }
           }
 
           if (method === "login") {
-            result = await LoginUser({ email, password });
+            try {
+              result = await LoginUser({ email, password });
+            } catch (err) {
+              setError(err.response.data.message);
+            }
           }
-          console.log("Login/Register result", result);
+
           if (result) {
             setPassword("");
             setEmail("");
             // fetchCart();
-            navigate("/");
+            navigate("/products");
           } else {
-            setError(result.message);
+            setError(response.data.message);
           }
         }}
       >

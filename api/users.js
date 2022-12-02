@@ -69,23 +69,43 @@ router.post(
     });
     // check is there is / isnt a user created
     // if there isn't a user, maybe send a error saying, no use exists
-    const validPassword = await bcrypt.compare(password, user.password);
-    if (validPassword) {
-      const token = jwt.sign(user, process.env.JWT_SECRET);
+    if (user) {
+      const validPassword = await bcrypt.compare(password, user.password);
+      if (validPassword) {
+        const token = jwt.sign(user, process.env.JWT_SECRET);
 
-      res.cookie("token", token, {
-        sameSite: "strict",
-        httpOnly: true,
-        signed: true,
-      });
-      delete user.password;
+        res.cookie("token", token, {
+          sameSite: "strict",
+          httpOnly: true,
+          signed: true,
+        });
+        delete user.password;
 
-      res.send(user);
+        res.send(user);
+      } else {
+        next({ message: "Wrong username or password. Please try again" });
+      }
     } else {
-      next({ message: "Wrong username or password. Please try again" });
+      next({ message: "No emails registered with that specific email" });
     }
   })
 );
+//POST /api/users/logout
+router.post("/logout", async (req, res, next) => {
+  try {
+    res.clearCookie("token", {
+      sameSite: "strict",
+      httpOnly: true,
+      signed: true,
+    });
+    res.send({
+      loggedIn: false,
+      message: "Logged Out",
+    });
+  } catch (error) {
+    next(error);
+  }
+});
 
 //GET /api/users/me
 router.get(
