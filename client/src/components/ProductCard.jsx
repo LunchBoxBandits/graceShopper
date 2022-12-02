@@ -1,5 +1,5 @@
 import React from "react";
-
+import useCart from "../hooks/useCart"
 //CSS STUFF
 import styles from "../syles/Products.module.css";
 import Button from "@mui/material/Button";
@@ -18,6 +18,9 @@ export default function ProductCard({ product }) {
 
       <Button
         variant="contained"
+        onClick={() => {
+          console.log("hello")
+        }}
         sx={{
           color: "dark",
           background: "blue",
@@ -28,6 +31,7 @@ export default function ProductCard({ product }) {
           mx: "auto",
           fontSize: 10,
         }}
+
       >
         Add To Cart
         <AddShoppingCartOutlinedIcon />
