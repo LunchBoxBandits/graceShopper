@@ -7,32 +7,39 @@ export const users = {
   setUsers: action((state, payload) => {
     state.data = payload;
   }),
+  addUser: action((state, payload) => {
+    state.data.push(payload);
+  }),
+  selectUser: action((state, payload) => {
+    state.selectedUser = payload;
+  }),
   register: thunk(async (actions, payload) => {
     const { data } = await axios.post("/api/users/register", payload);
     actions.addUser(data);
   }),
   login: thunk(async (actions, payload) => {
     const { data } = await axios.post("/api/users/login", payload);
-    actions.addUser(data);
+    actions.selectUser(data);
   }),
-  fetchUsers: thunk(async (actions, payload) => {
-    const { data } = await axios.get("/api/users");
-    actions.setUsers(data);
+  logout: thunk(async (actions, payload) => {
+    const { data } = await axios.post("/api/users/logout");
+    actions.selectUser(data);
   }),
+
   fetchUser: thunk(async (actions, payload) => {
     const { data } = await axios.get(`/api/users/${payload}`);
     actions.selectedUser(data);
   }),
   fetchMe: thunk(async (actions, payload) => {
     const { data } = await axios.get("/api/user/me");
-    actions.selectedUser(data);
+    actions.selectUser(data);
   }),
   myCart: thunk(async (actions, payload) => {
     const { data } = await axios.get("/api/user/me/cart");
-    actions.selectedUser(data);
+    actions.selectUser(data);
   }),
   myOrders: thunk(async (actions, payload) => {
     const { data } = await axios.get("/api/users/myOrders");
-    actions.selectedUser(data);
+    actions.selectUser(data);
   }),
 };
