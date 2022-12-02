@@ -3,7 +3,7 @@ import React from "react";
 //CSS STUFF
 import styles from "../syles/Products.module.css";
 import Button from "@mui/material/Button";
-import AddShoppingCartOutlinedIcon from '@mui/icons-material/AddShoppingCartOutlined';
+import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 
 export default function ProductCard({ product }) {
   return (
@@ -25,11 +25,12 @@ export default function ProductCard({ product }) {
           height: 50,
           display: "inline",
           fontWeight: "bold",
-          mx: 'auto',
+          mx: "auto",
           fontSize: 10,
         }}
       >
-       Add To Cart<AddShoppingCartOutlinedIcon/> 
+        Add To Cart
+        <AddShoppingCartOutlinedIcon />
       </Button>
     </div>
   );

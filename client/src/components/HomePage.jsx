@@ -1,9 +1,8 @@
-import react from "react";
 import styles from "../syles/Homepage.module.css";
-import {useNavigate} from "react-router-dom"
+import { useNavigate } from "react-router-dom";
 
 function Home() {
-    const nav = useNavigate();
+  const nav = useNavigate();
   return (
     <div>
       {/* this is the div for the nav */}
@@ -18,12 +17,13 @@ function Home() {
         <div className={styles.text}>
           <h1 className={styles.title}>Grace Shopper</h1>
           <h4>Come get your real fake cloths TODAY!!!!</h4>
-          <button 
-          className={styles.shopButton}
-          onClick={()=>{
-            nav("/products")
-          }}
-          >Shop Now
+          <button
+            className={styles.shopButton}
+            onClick={() => {
+              nav("/products");
+            }}
+          >
+            Shop Now
           </button>
         </div>
       </div>

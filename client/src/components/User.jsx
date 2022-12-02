@@ -56,18 +56,22 @@ export default function User() {
           placeholder="password"
         />
 
-        <input
-          value={firstName}
-          onChange={(e) => setFirstName(e.target.value)}
-          type="text"
-          placeholder="First Name"
-        />
-        <input
-          value={lastName}
-          onChange={(e) => setLastName(e.target.value)}
-          type="text"
-          placeholder="Last Name"
-        />
+        {method === "register" ? (
+          <div>
+            <input
+              value={firstName}
+              onChange={(e) => setFirstName(e.target.value)}
+              type="text"
+              placeholder="First Name"
+            ></input>
+            <input
+              value={lastName}
+              onChange={(e) => setLastName(e.target.value)}
+              type="text"
+              placeholder="Last Name"
+            />{" "}
+          </div>
+        ) : null}
 
         <button type="submit">
           {method === "register" ? "Register" : "Login"}
