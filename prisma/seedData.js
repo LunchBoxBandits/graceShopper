@@ -6,7 +6,7 @@ const Users = [
     password: "12345",
     address: "7668 Sunset St.Los Angeles, CA 90066",
     phone: "269 - 290 - 2565",
-    isAdmin: false
+    isAdmin: false,
   },
   {
     firstName: "Ugo",
@@ -15,7 +15,7 @@ const Users = [
     password: "6789",
     address: "52 Carson St.Alameda, CA 94501",
     phone: "512 - 452 - 1803",
-    isAdmin: false
+    isAdmin: false,
   },
   {
     firstName: "Wilson",
@@ -24,7 +24,7 @@ const Users = [
     password: "thisAlsoTest",
     address: "755 New Road London WC19 5EJ",
     phone: "256 - 763 - 1664",
-    isAdmin: false, 
+    isAdmin: false,
   },
   {
     firstName: "Goated",
@@ -41,81 +41,90 @@ const Users = [
 const Products = [
   // Beanies
   {
-    name: "The North Face Light Blue Beanie",
+    name: "TNF™ Logo Boxed Cuffed Beanie",
     price: 15,
-    description: "soft touch to your ears keeps your ears nice and warm",
+    description:
+      "Tame the most unruly mops with the TNF™ logo cuffed beanie, a rib knit hat with soft yarn for added stretch and comfort",
     category_id: 1,
     gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078934/GRACE%20SHOPPER/MEN/Beanies/The%20North%20Face%20Light%20Blue%20Beanie.jpg",
   },
   {
-    name: "The North Face Yellow Beanie",
+    name: "TNF™ Logo Box Cuffed Beanie",
     price: 15,
-    description: "soft touch to your ears keeps your ears nice and warm",
+    description:
+      "Tame the most unruly mops with the TNF™ logo cuffed beanie, a rib knit hat with soft yarn for added stretch and comfort",
     category_id: 1,
     gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078932/GRACE%20SHOPPER/MEN/Beanies/The%20North%20Face%20Yellow%20Beanie.jpg",
   },
   {
-    name: "The North Face Grey Beanie",
+    name: "TNF™ Logo Box Pom Beanie",
     price: 15,
-    description: "soft touch to your ears keeps your ears nice and warm",
+    description:
+      "Tame the most unruly mops with the TNF™ Logo Box Pom Beanie, a rib-knit hat with a pom detail and soft yarn for added stretch, comfort, and style.",
     category_id: 1,
     gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078791/GRACE%20SHOPPER/MEN/Beanies/The%20North%20Face%20Grey%20Beanie.jpg",
   },
   {
-    name: "The North Face Dark Grey Beanie",
+    name: "TNF™ Logo Box Cuffed Beanie",
     price: 15,
-    description: "soft touch to your ears keeps your ears nice and warm",
+    description:
+      "Tame the most unruly mops with the TNF™ Logo Box Pom Beanie, a rib-knit hat with a pom detail and soft yarn for added stretch, comfort, and style.",
     category_id: 1,
     gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078788/GRACE%20SHOPPER/MEN/Beanies/The%20North%20Face%20Dark%20Grey%20Beanie.jpg",
   },
   {
-    name: "The North Face Red Beanie",
+    name: "TNF™ Logo Box Cuffed Beanie",
     price: 15,
-    description: "soft touch to your ears keeps your ears nice and warm",
+    description:
+      "Tame the most unruly mops with the TNF™ logo cuffed beanie, a rib knit hat with soft yarn for added stretch and comfort",
     category_id: 1,
     gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078781/GRACE%20SHOPPER/MEN/Beanies/The%20North%20Face%20Red%20Beanie.jpg",
   },
   {
-    name: "Brownish Tan Beanie",
+    name: "Mens Knit Cuffed Beanie",
     price: 5,
-    description: "soft touch to your ears keeps your ears nice and warm",
+    description:
+      "On cold days, stay in style with our knit beanie, with great comfort and warmth will satisfy your desire for warmth ",
     category_id: 1,
     gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078745/GRACE%20SHOPPER/MEN/Beanies/Brownish%20Tan%20Beanie.jpg",
   },
   {
-    name: "Black Beanie",
+    name: "Mens Knit Cuffed Beanie",
     price: 5,
-    description: "soft touch to your ears keeps your ears nice and warm",
+    description:
+      "On cold days, stay in style with our knit beanie, with great comfort and warmth will satisfy your desire for warmth",
     category_id: 1,
     gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078691/GRACE%20SHOPPER/MEN/Beanies/Black%20Beanie.jpg",
   },
   {
-    name: "Black and Tan Beanie",
+    name: "Half and Half Cuffed Knit Beanie",
     price: 5,
-    description: "soft touch to your ears keeps your ears nice and warm",
+    description:
+      "On the coldest day be in style with our two tone beanie, with added great comfort and warmth will satisfy your desire for warmth",
     category_id: 1,
     gender_id: 3,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078667/GRACE%20SHOPPER/MEN/Beanies/Black%20and%20Tan.jpg",
   },
   {
-    name: "Grannies Beanie",
+    name: "Granny Beanie",
     price: 14,
-    description: "soft touch to your ears keeps your ears nice and warm",
+    description:
+      "On the coldest day, stay in style with the granny beanie, the comfort and warmth feels like a grandmothers hug",
     category_id: 1,
     gender_id: 3,
     imageUrl:
@@ -514,22 +523,22 @@ const Order_Products = [
   {
     order_id: 1,
     product_id: 1,
-    quantity: 2
+    quantity: 2,
   },
   {
     order_id: 1,
     product_id: 2,
-    quantity: 4
+    quantity: 4,
   },
   {
     order_id: 1,
     product_id: 3,
-    quantity: 6
+    quantity: 6,
   },
   {
     order_id: 2,
     product_id: 4,
-    quantity: 1
+    quantity: 1,
   },
 ];
 
@@ -541,7 +550,7 @@ const Payment_Details = [
     nameOnCard: "ferni",
     cardNumber: "2222405343248877",
     experationDate: "12/32",
-    cvc:234
+    cvc: 234,
   },
 ];
 
