@@ -1,0 +1,33 @@
+.card{
+    display: flex;
+    flex-wrap: wrap;
+}
+.allProducts{
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    margin-top:2%;
+    margin-left:2%;
+    width:25em;
+}
+
+.imag{
+    display: block;
+    width:50%;
+    height:50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text{
+    color:yellow;
+    text-align: center;
+}
+.price{
+    color:blue;
+    text-align: right;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: medium;
+}
+

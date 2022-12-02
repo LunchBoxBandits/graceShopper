@@ -17,7 +17,7 @@ function Home() {
         <img className={styles.manPic} src="model.jpg" alt="model" />
         <div className={styles.text}>
           <h1 className={styles.title}>Grace Shopper</h1>
-          <h5>Come get your real fake cloths TODAY!!!!</h5>
+          <h4>Come get your real fake cloths TODAY!!!!</h4>
           <button 
           className={styles.shopButton}
           onClick={()=>{
