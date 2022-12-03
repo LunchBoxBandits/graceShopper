@@ -5,11 +5,12 @@ export default function useUsers() {
   const RegisterUser = useStoreActions((actions) => actions.users.register);
   const LoginUser = useStoreActions((actions) => actions.users.login);
   const LogoutUser = useStoreActions((actions) => actions.users.logout);
-
+  const selectedUser = useStoreState((state) => state.users.selectedUser);
   return {
     users,
     RegisterUser,
     LoginUser,
     LogoutUser,
+    selectedUser,
   };
 }

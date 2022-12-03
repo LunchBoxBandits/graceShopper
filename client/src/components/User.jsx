@@ -18,6 +18,7 @@ export default function User() {
       <form
         onSubmit={async (event) => {
           event.preventDefault();
+
           let result;
           if (method === "register") {
             try {
@@ -27,6 +28,11 @@ export default function User() {
                 firstName,
                 lastName,
               });
+              navigate("/login");
+              setEmail("");
+              setPassword("");
+              setFirstName("");
+              setLastName("");
             } catch (err) {
               setError(err.response.data.message);
             }
@@ -35,6 +41,9 @@ export default function User() {
           if (method === "login") {
             try {
               result = await LoginUser({ email, password });
+              navigate("/products");
+              setEmail("");
+              setPassword("");
             } catch (err) {
               setError(err.response.data.message);
             }
@@ -44,7 +53,6 @@ export default function User() {
             setPassword("");
             setEmail("");
             // fetchCart();
-            navigate("/products");
           } else {
             setError(response.data.message);
           }

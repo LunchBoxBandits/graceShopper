@@ -3,7 +3,7 @@ import axios from "axios";
 
 export const users = {
   data: [],
-  selectedUser: { username: "Guest" },
+  selectedUser: { email: "Guest" },
   setUsers: action((state, payload) => {
     state.data = payload;
   }),
