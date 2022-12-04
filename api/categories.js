@@ -12,19 +12,16 @@ router.get(
   })
 );
 
-//GET/api/categories/categoryID
-// router.get(
-//   "/:categoryId",
-//   asyncErrorHandler(async (req, res, next) => {
-//     const getCategory = await prisma.categories.findUnique({
-//       where: {
-//         id: +req.params.categoryId,
-//       },
-//       include: {
-//         products: {},
-//       },
-//     });
-//     res.send(getCategory);
-//   })
-// );
+//GET/api/categories/categoryId
+router.get(
+  "/:categoryId",
+  asyncErrorHandler(async (req, res, next) => {
+    const getCategory = await prisma.products.findMany({
+      where: {
+        category_id: +req.params.categoryId,
+      },
+    });
+    res.send(getCategory);
+  })
+);
 module.exports = router;

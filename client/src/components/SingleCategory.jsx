@@ -1,55 +1,49 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useCategories from "../hooks/useCategory";
+import useProducts from "../hooks/useProduct";
 import { useParams } from "react-router-dom";
-
-// CSS stuff
-import styles from "../syles/Products.module.css";
-import Button from "@mui/material/Button";
-import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
+import ProductCard from "./ProductCard";
+import Categories from "./Categories";
 export default function SingleCategory() {
-  const { categoryId } = useParams();
-  const { fetchCategory, selectedCategory } = useCategories();
+  const [prodId, setProdId] = useState("");
+  const prodIds = useParams();
+  const { fetchCategories } = useCategories();
+  const { products, fetchProducts } = useProducts();
 
   useEffect(() => {
-    fetchCategory(categoryId);
+    fetchCategories();
   }, []);
-  console.log("selectedCategory", selectedCategory);
-  console.log("fetchCategory inside the SingleCategory jsx", fetchCategory);
+
+  useEffect(() => {
+    fetchProducts();
+  }, []);
+
+  useEffect(() => {
+    setProdId(+prodIds.categoryId);
+  }, [prodIds]);
+
+  const CategoryProducts = products.filter((product) => {
+    return product.category_id == prodId;
+  });
+
+  // console.log("products in singlecategory", products);
+  // console.log("prodId inside singlecategory", prodId);
+  console.log("CategoryProducts", CategoryProducts);
   return (
-    <div>
-      {selectedCategory.map((product) => {
-        return (
-          <div className={styles.allProducts} key={product}>
-            <h2 className={styles.text}>{product.name}</h2>
-
-            <img className={styles.imag} src={product.imageUrl} />
-
-            <h3 className={styles.text}>Description: {product.description}</h3>
-
-            <h5 className={styles.price}>Price ${product.price}</h5>
-
-            <Button
-              variant="contained"
-              onClick={() => {
-                console.log("hello");
-              }}
-              sx={{
-                color: "dark",
-                background: "blue",
-                width: 128,
-                height: 50,
-                display: "inline",
-                fontWeight: "bold",
-                mx: "auto",
-                fontSize: 10,
-              }}
-            >
-              Add To Cart
-              <AddShoppingCartOutlinedIcon />
-            </Button>
-          </div>
-        );
-      })}
-    </div>
+    <>
+      <div>
+        <Categories />
+      </div>
+      <div>
+        {CategoryProducts.map((product) => {
+          return (
+            <div>
+              <ProductCard product={product} />
+            </div>
+          );
+        })}
+      </div>
+      ;
+    </>
   );
 }
