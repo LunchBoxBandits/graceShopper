@@ -1,11 +1,15 @@
 const router = require("express").Router();
 const { asyncErrorHandler } = require("./utils");
 const prisma = require("../prisma/prisma");
-//GET / api/gender
+const { products } = require("../prisma/prisma");
+//GET / api/categories
 router.get(
   "/",
   asyncErrorHandler(async (req, res, next) => {
-    const categories = await prisma.categories.findMany();
+    const categories = await prisma.categories.findMany({
+      include: { products },
+    });
+
     res.send(categories);
   })
 );
@@ -17,6 +21,9 @@ router.get(
     const getCategory = await prisma.categories.findUnique({
       where: {
         id: +req.params.categoryId,
+      },
+      include: {
+        products: {},
       },
     });
     res.send(getCategory);
