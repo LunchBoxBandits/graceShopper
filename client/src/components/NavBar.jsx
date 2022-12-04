@@ -8,6 +8,7 @@ function NavBar() {
   return (
     <nav className="bg-black text-white h-10 ">
       <div className="flex flex-row justify-center space-x-32 space-y-4">
+        <p>LUNCH BOX BANDIDOS</p>
         <p> Welcome, {selectedUser.email}</p>
         <Link to="/products">Home</Link>
         {selectedUser.email === "Guest" ? (
