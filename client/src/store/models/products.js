@@ -13,8 +13,11 @@ export const products = {
     const { data } = await axios.get("/api/products");
     actions.setProducts(data);
   }),
-  fetchProduct: thunk(async(actions, payload)=>{
-    const {data} = await axios.get(`/api/products/${payload}`)
+  selectProduct: action((state, payload) => {
+    state.selectedProduct = payload;
+  }),
+  fetchProduct: thunk(async (actions, payload) => {
+    const { data } = await axios.get(`/api/products/${payload}`);
     actions.selectProduct(data);
   }),
 };
