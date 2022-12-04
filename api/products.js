@@ -10,7 +10,7 @@ router.get(
     res.send(products);
   })
 );
-//get //api/id
+//get //api/products/:productId
 
 router.get(
   "/:productId",
@@ -21,6 +21,20 @@ router.get(
       },
     });
     res.send(productById);
+  })
+);
+
+//get //api/products/category/:categoryId
+
+router.get(
+  "/category/:categoryId",
+  asyncErrorHandler(async (req, res, next) => {
+    const categoryById = await prisma.products.findMany({
+      where: {
+        category_id: +req.params.categoryId,
+      },
+    });
+    res.send(categoryById);
   })
 );
 

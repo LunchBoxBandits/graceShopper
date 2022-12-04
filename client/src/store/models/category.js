@@ -15,7 +15,8 @@ export const category = {
     state.selectedCategory = payload;
   }),
   fetchCategory: thunk(async (actions, payload) => {
-    const { data } = await axios.get(`/api/categories/${payload}`);
+    const { data } = await axios.get(`/api/products/category/${payload}`);
+
     actions.selectCategory(data);
   }),
 };

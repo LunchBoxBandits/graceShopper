@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar";
 import User from "./components/User";
 import Home from "./components/HomePage";
 import Cart from "./components/Cart";
+import Categories from "./components/Categories";
+import SingleCategory from "./components/SingleCategory";
 function App() {
   return (
     <div>
@@ -14,7 +16,12 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/products" element={<Products />} />
         <Route path="/:method" element={<User />} />
-        <Route path="/Cart" element={<Cart />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/categories" element={<Categories />} />
+        <Route
+          path="/products/category/:categoryId"
+          element={<SingleCategory />}
+        />
       </Routes>
     </div>
   );
