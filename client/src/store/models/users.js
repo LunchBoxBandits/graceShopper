@@ -25,7 +25,6 @@ export const users = {
     const { data } = await axios.post("/api/users/logout");
     actions.selectUser(data);
   }),
-
   fetchUser: thunk(async (actions, payload) => {
     const { data } = await axios.get(`/api/users/${payload}`);
     actions.selectedUser(data);

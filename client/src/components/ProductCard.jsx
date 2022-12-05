@@ -1,11 +1,15 @@
 import React from "react";
-import useCart from "../hooks/useCart"
+import useCart from "../hooks/useCart";
+import useUsers from "../hooks/useUsers";
 //CSS STUFF
 import styles from "../syles/Products.module.css";
 import Button from "@mui/material/Button";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 
 export default function ProductCard({ product }) {
+  const {createOrderswithProduct} = useCart();
+  const {selectedUser} = useUsers();
+
   return (
     <div className={styles.allProducts} key={product}>
       <h2 className={styles.text}>{product.name}</h2>
@@ -19,7 +23,7 @@ export default function ProductCard({ product }) {
       <Button
         variant="contained"
         onClick={() => {
-          console.log("hello")
+          createOrderswithProduct( selectedUser.id, product.id);
         }}
         sx={{
           color: "dark",
