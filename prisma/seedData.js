@@ -584,6 +584,47 @@ const Products = [
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084939/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_kzhqxb.jpg",
   },
+  //womens pants
+  {
+    name: "Straight Leg Corduroy Pants",
+    price: 55,
+    description:
+      "A great pair of straight-leg cord trousers, woven in cotton. Generously cut throught the leg with a slight taper to the ankle, good comfort from the waistline give you a relax feeling when wearing.",
+    category_id: 2,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084807/GRACE%20SHOPPER/WOMEN/Jeans/hmgoepprod_x0rqof.jpg",
+  },
+  {
+    name: "Straight Leg Corduroy Pants",
+    price: 55,
+    description:
+      "A great pair of straight-leg cord trousers, woven in cotton. Generously cut throught the leg with a slight taper to the ankle, good comfort from the waistline give you a relax feeling when wearing.",
+    category_id: 2,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084804/GRACE%20SHOPPER/WOMEN/Jeans/hmgoepprod_mjascd.jpg",
+  },
+  {
+    name: "Straight Leg Corduroy Pants",
+    price: 55,
+    description:
+      "A great pair of straight-leg cord trousers, woven in cotton. Generously cut throught the leg with a slight taper to the ankle, good comfort from the waistline give you a relax feeling when wearing.",
+    category_id: 2,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084798/GRACE%20SHOPPER/WOMEN/Jeans/hmgoepprod_ksdfsc.jpg",
+  },
+  {
+    name: "Straight Leg Corduroy Pants",
+    price: 55,
+    description:
+      "A great pair of straight-leg cord trousers, woven in cotton. Generously cut throught the leg with a slight taper to the ankle, good comfort from the waistline give you a relax feeling when wearing.",
+    category_id: 2,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084795/GRACE%20SHOPPER/WOMEN/Jeans/hmgoepprod_thuvlc.jpg",
+  },
 ];
 
 const Categories = [
