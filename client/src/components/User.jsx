@@ -3,7 +3,6 @@ import { useNavigate, useParams } from "react-router-dom";
 import useUsers from "../hooks/useUsers";
 import useCart from "../hooks/useCart";
 
-
 export default function User() {
   const { method } = useParams();
   const [email, setEmail] = useState("");
@@ -12,10 +11,9 @@ export default function User() {
   const [lastName, setLastName] = useState("");
   const navigate = useNavigate();
   const [error, setError] = useState("");
-  
 
   const { RegisterUser, LoginUser } = useUsers();
-  const {fetchCart} = useCart();
+  const { fetchCart } = useCart();
   return (
     <>
       <form
@@ -32,7 +30,7 @@ export default function User() {
                 lastName,
               });
               // call your fetch cart thunk
-              
+
               setEmail("");
               setPassword("");
               setFirstName("");
@@ -45,7 +43,7 @@ export default function User() {
           if (method === "login") {
             try {
               result = await LoginUser({ email, password });
-           
+
               setEmail("");
               setPassword("");
             } catch (err) {
@@ -57,9 +55,7 @@ export default function User() {
             setPassword("");
             setEmail("");
             fetchCart("");
-            navigate('/products')
-          } else {
-            setError("oops");
+            navigate("/products");
           }
         }}
       >
