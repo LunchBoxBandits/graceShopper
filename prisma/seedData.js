@@ -132,54 +132,60 @@ const Products = [
   },
   // Pants
   {
-    name: "Light White Pants",
+    name: "Mens Patch Pocket Straight Cargo Pants",
     price: 45,
-    description: "Pants with a good look",
+    description:
+      "These inner city mens cargo pants made from linen fabric, features large pockets along the leg. The straight leg feel, with an adjustable waist fit. ",
     category_id: 2,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079619/GRACE%20SHOPPER/MEN/Pants/Lights%20White%20Pants.jpg",
   },
   {
-    name: "Gray Joggers",
+    name: "Men's Joggers",
     price: 35,
-    description: "Pants with a good look",
+    description:
+      "These high and in style joggers will give you the best look while being in the most comfort, with drawstring on the cuff of the pants and waist line, nice and fitting for all four seasons",
     category_id: 2,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079612/GRACE%20SHOPPER/MEN/Pants/Gray%20Joggers.jpg",
   },
   {
-    name: "Black Sweats",
+    name: "Loose Fit Track",
     price: 50,
-    description: "Pants with a good look",
+    description:
+      "Our Loose Fit Track made from cotton features an all day comfort, drawstring fitting on waistline and elastic cuff on the bottom give you an option of a loose but fitting feel",
     category_id: 2,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079608/GRACE%20SHOPPER/MEN/Pants/Black%20Sweats.jpg",
   },
   {
-    name: "Ripped Jeans",
+    name: "Men's Light Washed Ripped Slim Straight Jeans",
     price: 60,
-    description: "Pants with a good look",
+    description:
+      "Keep it cool and laidback, in our ripped jeans, ripped details in the leg area this loose straight leg fit for all-day comfort.",
     category_id: 2,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079580/GRACE%20SHOPPER/MEN/Pants/Ripped%20Jeans.jpg",
   },
   {
-    name: "Black Ripped Jeans",
+    name: "Black Skinny Comfort Stretch Jeans",
     price: 50,
-    description: "Pants with a good look",
+    description:
+      "Upgrade your wardrobe with help with Skinny Comfort Stretch Jeans. Durable fabric with great comfort will have you wearing whilst staying home.",
     category_id: 2,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079578/GRACE%20SHOPPER/MEN/Pants/Black%20Ripped%20Jeans.jpg",
   },
   {
-    name: "Burgundy Jeans",
+    name: "Wilson Chen Cargo Pants",
     price: 50,
-    description: "Pants with a good look",
+    description:
+      "Get into style with fashion experts design Wilson Chen Cargo Pants.  These pants have a great fit with pocket down the side of the leg and adjustable waistline for all fit",
     category_id: 2,
     gender_id: 1,
     imageUrl:
@@ -187,64 +193,70 @@ const Products = [
   },
   // Underwear
   {
-    name: "Orange Underwear",
+    name: "Mens Microfiber Boxer Briefs",
     price: 20,
-    description: "Keeps the sack nice and dry and warm",
+    description:
+      "Designed for optimal comfort, the boxer briefs are made from soft microfibers with cooling properties and four-way stretch for ease of movement",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078404/GRACE%20SHOPPER/MEN/Underwear/Orange%20Underwear.jpg",
   },
   {
-    name: "Pinkish Underwear",
+    name: "Boxer Briefs",
     price: 20,
-    description: "Keeps the sack nice and dry and warm",
+    description:
+      "Perfect combo of soft and free yet supportive and strong. These briefs will form to any figure, allowing for carefree comfort all day. Our durable stiching keeps your Undies in place for whatever you get into, which means no bunching, and best of all, no wedgies.",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077802/GRACE%20SHOPPER/MEN/Underwear/Purple-Underwear.webp",
   },
   {
-    name: "Red Underwear",
+    name: "Boxer Briefs",
     price: 20,
-    description: "Keeps the sack nice and dry and warm",
+    description:
+      "Perfect combo of soft and free yet supportive and strong. These briefs will form to any figure, allowing for carefree comfort all day. Our durable stiching keeps your Undies in place for whatever you get into, which means no bunching, and best of all, no wedgies.",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077755/GRACE%20SHOPPER/MEN/Underwear/Red%20Underwear.jpg",
   },
   {
-    name: "Blue Underwear",
+    name: "Amazon Mens Briefs",
     price: 20,
     description:
-      "Keeps the sack nice and dry and warm these are not as comfortable",
+      "Regular-rise briefs by Amazon. Topped with exposed waistbands, these briefs are crafted in stretch cotton for natural comfort and breathability.",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077735/GRACE%20SHOPPER/MEN/Underwear/Blue%20Underwear.jpg",
   },
   {
-    name: "BrickColor Underwear",
+    name: "Yahoo Mens Briefs",
     price: 20,
-    description: "Keeps the sack nice and dry and warm",
+    description:
+      "Regular-rise briefs by Yahoo. Topped with exposed waistbands, these briefs are crafted in stretch cotton for natural comfort and breathability.",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077724/GRACE%20SHOPPER/MEN/Underwear/BrickColor%20underwear.jpg",
   },
   {
-    name: "Black Underwear",
+    name: "Mens Boxer Briefs",
     price: 20,
-    description: "Keeps the sack nice and dry and warm",
+    description:
+      "Designed for optimal comfort, the boxer briefs are made from soft microfibers with cooling properties and four-way stretch for ease of movement",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077555/GRACE%20SHOPPER/MEN/Underwear/Black%20Underwear.webp",
   },
   {
-    name: "White UnderWear",
+    name: "Mens Boxer Briefs",
     price: 30,
-    description: "poop stains are very visible",
+    description:
+      "Designed for optimal comfort, the boxer briefs are made from soft microfibers with cooling properties and four-way stretch for ease of movement",
     category_id: 3,
     gender_id: 1,
     imageUrl:
@@ -461,6 +473,117 @@ const Products = [
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084409/GRACE%20SHOPPER/MEN/T-Shirts%20and%20Tops/hmgoepprod_acwuxt.jpg",
   },
+  {
+    name: "Women Square Neck Long Sleeve Bodycon Dress",
+    price: 200,
+    description:
+      "You'll look absoluting stunning in the Square Neck Longs Sleeve Bodycon dress in beige! Strechy cotton this classic dress that has a mock neckline, fitted long sleeves and a bodycon silhouette, be in comfort and style with our 1/50 dresses made.",
+    category_id: 8,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084694/GRACE%20SHOPPER/WOMEN/Dresses/hmgoepprod_ey7gre.jpg",
+  },
+  {
+    name: "Womens Midi Long Sleeve Bodycon Dress",
+    price: 200,
+    description:
+      "You'll look absoluting stunning in the Square Neck Longs Sleeve Bodycon dress in grey! Strechy cotton this classic dress that has a mock neckline, fitted long sleeves and a bodycon silhouette, be in comfort and style with our 1/50 dresses made.",
+    category_id: 8,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084690/GRACE%20SHOPPER/WOMEN/Dresses/hmgoepprod_xbssno.jpg",
+  },
+  {
+    name: "Womens Midi Long Sleeve Bodycon Dress",
+    price: 200,
+    description:
+      "You'll look absoluting stunning in the Square Neck Longs Sleeve Bodycon dress in brown! Strechy cotton this classic dress that has a mock neckline, fitted long sleeves and a bodycon silhouette, be in comfort and style with our 1/50 dresses made.",
+    category_id: 8,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084687/GRACE%20SHOPPER/WOMEN/Dresses/hmgoepprod_ha1clv.jpg",
+  },
+  {
+    name: "Womens Midi Long Sleeve Bodycon Dress",
+    price: 200,
+    description:
+      "You'll look absoluting stunning in the Square Neck Longs Sleeve Bodycon dress in black! Strechy cotton this classic dress that has a mock neckline, fitted long sleeves and a bodycon silhouette, be in comfort and style with our 1/50 dresses made.",
+    category_id: 8,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084683/GRACE%20SHOPPER/WOMEN/Dresses/hmgoepprod_acgkn3.jpg",
+  },
+  //Hoodies and Sweatshirts
+  {
+    name: "Oversized Sweatshirt",
+    price: 45,
+    description:
+      "Stay in style with our crew neck made from cotton for absolute comfort, this crewneck keeps your warm in the winter and with a oversize fit and look with great added comfrot",
+    category_id: 5,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084988/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_nr8z5z.jpg",
+  },
+  {
+    name: "Womens Oversized Zipper Jacket",
+    price: 60,
+    description:
+      "You will absolutely love this warmth feeling of the cotton inside, our oversized jacket will have you in style in todays times",
+    category_id: 5,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084955/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_vnkitn.jpg",
+  },
+  {
+    name: "Womens Sweater Zipper Jacket",
+    price: 45,
+    description:
+      "Enjoy the winter time in our grey sweater jacket, with zipper.  Can style with zipper all the way up or down to your liking, stay warm and cozy with our cotton fabric",
+    category_id: 5,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084953/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_mkwrzy.jpg",
+  },
+  {
+    name: "Womens Sweater Zipper Jacket",
+    price: 45,
+    description:
+      "Our exclusive green sweater jacket will have you in style with some of the top fashionista in the world.  Stay in cozy and warm with our cotton fabric. Style it with zipper to your liking. ",
+    category_id: 5,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084950/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_fpmqpi.jpg",
+  },
+  {
+    name: "Womens Sweater Zipper Jacket",
+    price: 45,
+    description:
+      "This dark grey jacket gives a hint of mystery added style, zipper to add your flare either open or closed, stay in style and in comfort in our Sweater Jacket",
+    category_id: 5,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084947/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_sbcrws.jpg",
+  },
+  {
+    name: "Womens Sweater Zipper Jacket",
+    price: 45,
+    description:
+      "Enjoy the winter time in our brown sweater jacket, with zipper.  Can style with zipper all the way up or down to your liking, stay warm and cozy with our cotton fabric",
+    category_id: 5,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084944/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_lw08fk.jpg",
+  },
+  {
+    name: "Womens Sweater Zipper Jacket",
+    price: 45,
+    description:
+      "Enjoy the winter time in our brown sweater jacket, with zipper.  Can style with zipper all the way up or down to your liking, stay warm and cozy with our cotton fabric",
+    category_id: 5,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084939/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_kzhqxb.jpg",
+  },
 ];
 
 const Categories = [
@@ -491,6 +614,10 @@ const Categories = [
   {
     id: 7,
     name: "Tshirts",
+  },
+  {
+    id: 8,
+    name: "Dresses",
   },
 ];
 
