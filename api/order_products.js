@@ -20,6 +20,7 @@ router.post(
   asyncErrorHandler(async (req, res, next) => {
     // const { order_id, product_id} = req.params;
     const { order_id, product_id, quantity } = req.body;
+    res.send(order_id, product_id);
     const oP = await prisma.order_Products.create({
       data: {
         order_id: +order_id,

@@ -8,7 +8,8 @@ export default function Cart() {
   useEffect(() => {
     fetchCart();
   }, []);
-  console.log("cart in the Cart.jsx", cart);
+  // console.log("cart in the Cart.jsx", cart);
+
   return (
     <>
       <h1> Shopping Cart</h1>

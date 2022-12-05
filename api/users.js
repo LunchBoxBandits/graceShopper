@@ -39,7 +39,7 @@ router.post(
     const cart = await prisma.orders.create({
       data: {
         userId: user.id,
-        total: 0,
+        total: 1,
         isCart: true,
       },
     });

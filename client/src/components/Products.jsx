@@ -23,7 +23,7 @@ export default function Products() {
       </div>
       <div className={styles.card}>
         {products.map((product) => {
-          return <ProductCard product={product} createOrderswithProduct={createOrderswithProduct} selectedUser={selectedUser}/>;
+          return <ProductCard product={product} createOrderswithProduct={createOrderswithProduct} />;
         })}
       </div>
     </>

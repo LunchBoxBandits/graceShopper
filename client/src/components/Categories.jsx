@@ -25,8 +25,8 @@ export default function Categories() {
     return product.categoryId == prodId;
   });
 
-  console.log("categories inside Categories jsx", categories);
-  console.log("selectedCategory inside categories jsx", selectedCategory);
+  // console.log("categories inside Categories jsx", categories);
+  // console.log("selectedCategory inside categories jsx", selectedCategory);
   return (
     <>
       <div>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import useCart from "../hooks/useCart";
 import useUsers from "../hooks/useUsers";
 //CSS STUFF
@@ -6,10 +6,19 @@ import styles from "../syles/Products.module.css";
 import Button from "@mui/material/Button";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 
-export default function ProductCard({ product }) {
-  const {createOrderswithProduct} = useCart();
+
+export default function ProductCard({ product })  {
+  const {addToCart, cart, selectedCart, fetchCart} = useCart();
   const {selectedUser} = useUsers();
 
+  useEffect(() => {
+    fetchCart();
+  },[]);
+
+  console.log("this is the cart",cart);
+  console.log("this is the selected cart", selectedCart);
+  console.log("this is selectedUser", selectedUser.id);
+  
   return (
     <div className={styles.allProducts} key={product}>
       <h2 className={styles.text}>{product.name}</h2>
@@ -23,8 +32,9 @@ export default function ProductCard({ product }) {
       <Button
         variant="contained"
         onClick={() => {
-          createOrderswithProduct( selectedUser.id, product.id);
+          addToCart( {order_id: cart.id, product_id: product.id, quantity: 1});
         }}
+        
         sx={{
           color: "dark",
           background: "blue",
@@ -35,8 +45,9 @@ export default function ProductCard({ product }) {
           mx: "auto",
           fontSize: 10,
         }}
-
+      
       >
+
         Add To Cart
         <AddShoppingCartOutlinedIcon />
       </Button>
