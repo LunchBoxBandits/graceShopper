@@ -20,10 +20,6 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/:categoryId" element={<SingleCategory />} />
-        {/* <Route
-          path="/products/category/:categoryId"
-          element={<SingleCategory />}
-        /> */}
       </Routes>
     </div>
   );

@@ -2,8 +2,10 @@ import React from "react";
 import { useEffect } from "react";
 import useCart from "../hooks/useCart";
 
+
 export default function Cart() {
-  const { fetchCart, cart } = useCart();
+  const { fetchCart, cart, editCart } = useCart();
+
 
   useEffect(() => {
     fetchCart();
@@ -24,7 +26,20 @@ export default function Cart() {
             <div>
               <h2> {item.products.name}</h2>
               <img width={50} height={50} src={item.products.imageUrl} />
-              Qty: {item.quantity}
+              <div>
+                <button 
+                  onClick={()=>{
+                    editCart(item.quantity = item.quantity - 1)
+                  }}
+                > - </button>
+                Qty: {item.quantity}
+                <button
+                  onClick={()=>{
+                    editCart(item.quantity = item.quantity + 1)
+                  }}
+                > + </button>
+              </div>
+              
               <h3>${item.products.price}.00</h3>
             </div>
           );

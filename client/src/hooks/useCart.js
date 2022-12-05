@@ -13,6 +13,8 @@ export default function useCart() {
     return state.cart.selectedCart;
   });
 
+  const editCart = useStoreActions((actions) => actions.cart.editCart);
+
   return {
     fetchCart,
     cart,

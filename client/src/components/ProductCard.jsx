@@ -23,6 +23,7 @@ export default function ProductCard({ product })  {
       <h5 className={styles.price}>Price ${product.price}</h5>
 
       <Button
+      
         variant="contained"
         onClick={async() => {
           await addToCart( {order_id: cart.id, product_id: product.id, quantity: 1});
@@ -38,6 +39,8 @@ export default function ProductCard({ product })  {
           mx: "auto",
           fontSize: 10,
         }}
+        
+
       
       >
 
