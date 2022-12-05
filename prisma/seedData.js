@@ -187,64 +187,63 @@ const Products = [
   },
   // Underwear
   {
-    name: "Orange Underwear",
+    name: "Mens Microfiber Boxer Briefs",
     price: 20,
-    description: "Keeps the sack nice and dry and warm",
+    description: "Designed for optimal comfort, the boxer briefs are made from soft microfibers with cooling properties and four-way stretch for ease of movement",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669078404/GRACE%20SHOPPER/MEN/Underwear/Orange%20Underwear.jpg",
   },
   {
-    name: "Pinkish Underwear",
+    name: "Boxer Briefs",
     price: 20,
-    description: "Keeps the sack nice and dry and warm",
+    description: "Perfect combo of soft and free yet supportive and strong. These briefs will form to any figure, allowing for carefree comfort all day. Our durable stiching keeps your Undies in place for whatever you get into, which means no bunching, and best of all, no wedgies.",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077802/GRACE%20SHOPPER/MEN/Underwear/Purple-Underwear.webp",
   },
   {
-    name: "Red Underwear",
+    name: "Boxer Briefs",
     price: 20,
-    description: "Keeps the sack nice and dry and warm",
+    description: "Perfect combo of soft and free yet supportive and strong. These briefs will form to any figure, allowing for carefree comfort all day. Our durable stiching keeps your Undies in place for whatever you get into, which means no bunching, and best of all, no wedgies.",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077755/GRACE%20SHOPPER/MEN/Underwear/Red%20Underwear.jpg",
   },
   {
-    name: "Blue Underwear",
+    name: "Amazon Mens Briefs",
     price: 20,
-    description:
-      "Keeps the sack nice and dry and warm these are not as comfortable",
+    description: "Regular-rise briefs by Amazon. Topped with exposed waistbands, these briefs are crafted in stretch cotton for natural comfort and breathability.",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077735/GRACE%20SHOPPER/MEN/Underwear/Blue%20Underwear.jpg",
   },
   {
-    name: "BrickColor Underwear",
+    name: "Yahoo Mens Briefs",
     price: 20,
-    description: "Keeps the sack nice and dry and warm",
+    description: "Regular-rise briefs by Yahoo. Topped with exposed waistbands, these briefs are crafted in stretch cotton for natural comfort and breathability.",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077724/GRACE%20SHOPPER/MEN/Underwear/BrickColor%20underwear.jpg",
   },
   {
-    name: "Black Underwear",
+    name: "Mens Boxer Briefs",
     price: 20,
-    description: "Keeps the sack nice and dry and warm",
+    description: "Designed for optimal comfort, the boxer briefs are made from soft microfibers with cooling properties and four-way stretch for ease of movement",
     category_id: 3,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669077555/GRACE%20SHOPPER/MEN/Underwear/Black%20Underwear.webp",
   },
   {
-    name: "White UnderWear",
+    name: "Mens Boxer Briefs",
     price: 30,
-    description: "poop stains are very visible",
+    description: "Designed for optimal comfort, the boxer briefs are made from soft microfibers with cooling properties and four-way stretch for ease of movement",
     category_id: 3,
     gender_id: 1,
     imageUrl:
