@@ -132,54 +132,54 @@ const Products = [
   },
   // Pants
   {
-    name: "Light White Pants",
+    name: "Mens Patch Pocket Straight Cargo Pants",
     price: 45,
-    description: "Pants with a good look",
+    description: "These inner city mens cargo pants made from linen fabric, features large pockets along the leg. The straight leg feel, with an adjustable waist fit. ",
     category_id: 2,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079619/GRACE%20SHOPPER/MEN/Pants/Lights%20White%20Pants.jpg",
   },
   {
-    name: "Gray Joggers",
+    name: "Men's Joggers",
     price: 35,
-    description: "Pants with a good look",
+    description: "These high and in style joggers will give you the best look while being in the most comfort, with drawstring on the cuff of the pants and waist line, nice and fitting for all four seasons",
     category_id: 2,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079612/GRACE%20SHOPPER/MEN/Pants/Gray%20Joggers.jpg",
   },
   {
-    name: "Black Sweats",
+    name: "Loose Fit Track",
     price: 50,
-    description: "Pants with a good look",
+    description: "Our Loose Fit Track made from cotton features an all day comfort, drawstring fitting on waistline and elastic cuff on the bottom give you an option of a loose but fitting feel",
     category_id: 2,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079608/GRACE%20SHOPPER/MEN/Pants/Black%20Sweats.jpg",
   },
   {
-    name: "Ripped Jeans",
+    name: "Men's Light Washed Ripped Slim Straight Jeans",
     price: 60,
-    description: "Pants with a good look",
+    description: "Keep it cool and laidback, in our ripped jeans, ripped details in the leg area this loose straight leg fit for all-day comfort.",
     category_id: 2,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079580/GRACE%20SHOPPER/MEN/Pants/Ripped%20Jeans.jpg",
   },
   {
-    name: "Black Ripped Jeans",
+    name: "Black Skinny Comfort Stretch Jeans",
     price: 50,
-    description: "Pants with a good look",
+    description: "Upgrade your wardrobe with help with Skinny Comfort Stretch Jeans. Durable fabric with great comfort will have you wearing whilst staying home.",
     category_id: 2,
     gender_id: 1,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669079578/GRACE%20SHOPPER/MEN/Pants/Black%20Ripped%20Jeans.jpg",
   },
   {
-    name: "Burgundy Jeans",
+    name: "Wilson Chen Cargo Pants",
     price: 50,
-    description: "Pants with a good look",
+    description: "Get into style with fashion experts design Wilson Chen Cargo Pants.  These pants have a great fit with pocket down the side of the leg and adjustable waistline for all fit",
     category_id: 2,
     gender_id: 1,
     imageUrl:
@@ -461,6 +461,30 @@ const Products = [
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084409/GRACE%20SHOPPER/MEN/T-Shirts%20and%20Tops/hmgoepprod_acwuxt.jpg",
   },
+  {
+    name: "Grey Dress",
+    price: 15,
+    description: "Nice dress",
+    category_id: 8,
+    gender_id: 2,
+    imageUrl: "https://res.cloudinary.com/dsvltch46/image/upload/v1669084694/GRACE%20SHOPPER/WOMEN/Dresses/hmgoepprod_ey7gre.jpg"
+  },
+  {
+    name: "Grey sleeved dress",
+    price: 380,
+    description: "nice dress",
+    category_id: 8,
+    gender_id: 2,
+    imageUrl:"https://res.cloudinary.com/dsvltch46/image/upload/v1669084690/GRACE%20SHOPPER/WOMEN/Dresses/hmgoepprod_xbssno.jpg"
+  },
+  {
+    name: "",
+    price: ,
+    description: """,
+    category_id: ,
+    gender_id: ,
+    imageUrl:""
+  },
 ];
 
 const Categories = [
@@ -491,6 +515,10 @@ const Categories = [
   {
     id: 7,
     name: "Tshirts",
+  },
+  {
+id:8,
+name: "Dresses"
   },
 ];
 
