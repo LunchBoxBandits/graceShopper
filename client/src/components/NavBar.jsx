@@ -1,10 +1,20 @@
 import { Link, useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 import useUsers from "../hooks/useUsers";
+import useCart from "../hooks/useCart";
 
 function NavBar() {
-  const { LogoutUser, selectedUser } = useUsers();
+  const { LogoutUser, selectedUser, fetchMe } = useUsers();
+  const { fetchCart} = useCart()
   const navigate = useNavigate();
-  console.log("selectedUser in the Navbar:", selectedUser);
+ 
+
+  useEffect(()=>{
+    fetchMe().then(()=>{
+      fetchCart();
+    })
+  },[]);
+
   return (
     <nav className="bg-black text-white h-10 ">
       <div className="flex flex-row justify-center space-x-32 space-y-4">
