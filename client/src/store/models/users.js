@@ -2,7 +2,6 @@ import { action, thunk } from "easy-peasy";
 import axios from "axios";
 
 export const users = {
-  data: [],
   selectedUser: { email: "Guest" },
   setUsers: action((state, payload) => {
     state.data = payload;
@@ -30,11 +29,11 @@ export const users = {
     actions.selectedUser(data);
   }),
   fetchMe: thunk(async (actions, payload) => {
-    const { data } = await axios.get("/api/user/me");
+    const { data } = await axios.get("/api/users/me");
     actions.selectUser(data);
   }),
   myCart: thunk(async (actions, payload) => {
-    const { data } = await axios.get("/api/user/me/cart");
+    const { data } = await axios.get("/api/users/me/cart");
     actions.selectUser(data);
   }),
   myOrders: thunk(async (actions, payload) => {

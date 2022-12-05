@@ -3,8 +3,7 @@ import { action, thunk } from "easy-peasy";
 import axios from "axios";
 
 export const cart = {
-  data:[],
-  selectedCart: {},
+  data:{},
   setCart: action((state, payload) => {
     state.data = payload;
   }),
@@ -19,7 +18,6 @@ export const cart = {
   }),
   addToCart: thunk(async (actions, payload) => {
   // the payload needs to have the following { order_id, product_id, quantity }
-  const payload = {order_id, product_id, quantity}
    await axios.post(`/api/order_products`, payload);
    const { data } = await axios.get("/api/users/me/cart");
    actions.setCart(data);

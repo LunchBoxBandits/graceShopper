@@ -59,7 +59,7 @@ export default function User() {
             fetchCart("");
             navigate('/products')
           } else {
-            setError(err.response.data.message);
+            setError("oops");
           }
         }}
       >

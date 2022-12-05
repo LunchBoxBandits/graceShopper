@@ -11,13 +11,6 @@ export default function ProductCard({ product })  {
   const {addToCart, cart, selectedCart, fetchCart} = useCart();
   const {selectedUser} = useUsers();
 
-  useEffect(() => {
-    fetchCart();
-  },[]);
-
-  console.log("this is the cart",cart);
-  console.log("this is the selected cart", selectedCart);
-  console.log("this is selectedUser", selectedUser.id);
   
   return (
     <div className={styles.allProducts} key={product}>
@@ -31,8 +24,8 @@ export default function ProductCard({ product })  {
 
       <Button
         variant="contained"
-        onClick={() => {
-          addToCart( {order_id: cart.id, product_id: product.id, quantity: 1});
+        onClick={async() => {
+          await addToCart( {order_id: cart.id, product_id: product.id, quantity: 1});
         }}
         
         sx={{
