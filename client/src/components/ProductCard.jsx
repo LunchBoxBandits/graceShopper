@@ -1,14 +1,11 @@
-import { useEffect, useState } from "react";
 import useCart from "../hooks/useCart";
-import useUsers from "../hooks/useUsers";
 //CSS STUFF
 import styles from "../syles/Products.module.css";
 import Button from "@mui/material/Button";
 import AddShoppingCartOutlinedIcon from "@mui/icons-material/AddShoppingCartOutlined";
 
 export default function ProductCard({ product, setError }) {
-  const { addToCart, cart, selectedCart, fetchCart } = useCart();
-  const { selectedUser } = useUsers();
+  const { addToCart, cart } = useCart();
 
   return (
     <div className={styles.allProducts} key={product}>
@@ -19,7 +16,7 @@ export default function ProductCard({ product, setError }) {
       <h3 className={styles.text}>Description: {product.description}</h3>
 
       <h5 className={styles.price}>Price ${product.price}</h5>
-
+    
       <Button
         variant="contained"
         onClick={async () => {
@@ -27,7 +24,7 @@ export default function ProductCard({ product, setError }) {
             await addToCart({
               order_id: cart.id,
               product_id: product.id,
-              quantity: 1,
+              quantity: 4,
             });
             setError("");
           } catch (err) {

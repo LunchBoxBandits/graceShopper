@@ -1,11 +1,11 @@
 import React from "react";
 import { useEffect } from "react";
 import useCart from "../hooks/useCart";
+import useProducts from "../hooks/useProduct";
 
-
-export default function Cart() {
-  const { fetchCart, cart, editCart } = useCart();
-
+export default function Cart({ product }) {
+  const { fetchCart, cart, newQuanity } = useCart();
+  const { selectedProduct } = useProducts();
 
   useEffect(() => {
     fetchCart();
@@ -27,19 +27,36 @@ export default function Cart() {
               <h2> {item.products.name}</h2>
               <img width={50} height={50} src={item.products.imageUrl} />
               <div>
-                <button 
-                  onClick={()=>{
-                    editCart(item.quantity = item.quantity - 1)
-                  }}
-                > - </button>
+                <button
+                // onClick={async () => {
+                //   try {
+                //     await editCart((item.quantity = item.quantity - 1));
+                //     console.log("quantity is:", item.quantity);
+                //   } catch (error) {
+                //     console.log("error in decreasing value");
+                //   }
+                // }}
+                >
+                  -
+                </button>
                 Qty: {item.quantity}
                 <button
-                  onClick={()=>{
-                    editCart(item.quantity = item.quantity + 1)
+                  onClick={async () => {
+                    try {
+                      console.log(item.quantity);
+                      await newQuanity({
+                        order_id_product_id: cart.id,
+                        quantity: item.quantity += 1 
+                      });
+                    } catch (error) {
+                      console.log(error);
+                    }
                   }}
-                > + </button>
+                >
+                  +
+                </button>
               </div>
-              
+
               <h3>${item.products.price}.00</h3>
             </div>
           );

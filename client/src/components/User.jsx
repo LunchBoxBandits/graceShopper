@@ -43,7 +43,6 @@ export default function User() {
           if (method === "login") {
             try {
               result = await LoginUser({ email, password });
-
               setEmail("");
               setPassword("");
             } catch (err) {

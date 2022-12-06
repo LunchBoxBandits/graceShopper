@@ -13,13 +13,16 @@ export default function useCart() {
     return state.cart.selectedCart;
   });
 
-  const editCart = useStoreActions((actions) => actions.cart.editCart);
+  const newQuanity = useStoreActions((actions) => {
+    return actions.cart.newQuanity;
+  });
+
 
   return {
     fetchCart,
     cart,
     addToCart,
     selectedCart,
-    editCart
+    newQuanity,
   };
 }
