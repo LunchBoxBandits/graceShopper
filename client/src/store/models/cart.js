@@ -25,7 +25,7 @@ export const cart = {
   }),
  // editCart: => hits you patch route in order_procuts
   editCart:action(async(actions,payload)=>{
-    const { data } = await axios.get(`/api/order_products/${payload.order_id}/${payload.product_id}`);
+    const { data } = await axios.patch(`/api/order_products/${payload.order_id}/${payload.product_id}`);
     actions.setCart(data);
   }),
  // remove from cart => hits the delte route in order_prodcuts

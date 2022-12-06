@@ -20,5 +20,6 @@ export default function useCart() {
     cart,
     addToCart,
     selectedCart,
+    editCart
   };
 }
