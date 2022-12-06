@@ -2,10 +2,12 @@ import React from "react";
 import { useEffect, useState } from "react";
 import useCart from "../hooks/useCart";
 import useProducts from "../hooks/useProduct";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart({ product }) {
   const { fetchCart, cart, editQuantity, deleteItem } = useCart();
   const { selectedProduct } = useProducts();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchCart();
@@ -82,6 +84,22 @@ export default function Cart({ product }) {
           Total: $
           {(cart.total = cart.total + Math.floor(cart.total * 0.0925) / 2)}
         </h4>
+      </div>
+      <div>
+        <button
+          onClick={async (e) => {
+            navigate("/checkout");
+          }}
+        >
+          Checkout
+        </button>
+        <button
+          onClick={async (e) => {
+            navigate("/products");
+          }}
+        >
+          Continue Shopping
+        </button>
       </div>
     </>
   );
