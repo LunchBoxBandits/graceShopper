@@ -28,33 +28,34 @@ router.post(
         name: "UserAlreadyExists",
         message: "This email is already registered, please use another email",
       });
+    } else {
+      const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
+      const user = await prisma.users.create({
+        data: { email, password: hashedPassword, firstName, lastName },
+      });
+      console.log("This is my user.id:", user.id);
+      // Create A Cart => Use the user.id for the order's userId, make sure isCart = true
+
+      const cart = await prisma.orders.create({
+        data: {
+          userId: user.id,
+          total: 1,
+          isCart: true,
+        },
+      });
+
+      console.log("This is the user in register route:", user);
+      delete user.password;
+      const token = jwt.sign(user, process.env.JWT_SECRET);
+
+      res.cookie("token", token, {
+        sameSite: "strict",
+        httpOnly: true,
+        signed: true,
+      });
+
+      res.send(user);
     }
-    const hashedPassword = await bcrypt.hash(password, SALT_ROUNDS);
-    const user = await prisma.users.create({
-      data: { email, password: hashedPassword, firstName, lastName },
-    });
-    console.log("This is my user.id:", user.id);
-    // Create A Cart => Use the user.id for the order's userId, make sure isCart = true
-
-    const cart = await prisma.orders.create({
-      data: {
-        userId: user.id,
-        total: 1,
-        isCart: true,
-      },
-    });
-
-    console.log("This is the user in register route:", user);
-    delete user.password;
-    const token = jwt.sign(user, process.env.JWT_SECRET);
-
-    res.cookie("token", token, {
-      sameSite: "strict",
-      httpOnly: true,
-      signed: true,
-    });
-
-    res.send(user);
   })
 );
 
