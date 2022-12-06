@@ -18,17 +18,29 @@ router.get(
 router.post(
   "/",
   asyncErrorHandler(async (req, res, next) => {
-   console.log("hello", req.body);
+    console.log("hello", req.body);
     const { order_id, product_id, quantity } = req.body;
-  
-    const oP = await prisma.order_Products.create({
-      data: {
-        order_id: +order_id,
-        product_id: +product_id,
-        quantity: +quantity,
+    const checkOp = await prisma.order_Products.findUnique({
+      where: {
+        order_id_product_id: { order_id: +order_id, product_id: +product_id },
       },
     });
-    res.send(oP);
+
+    if (checkOp) {
+      next({
+        name: "ItemAlreadyInCart",
+        message: "This item is already added inside the cart",
+      });
+    } else {
+      const oP = await prisma.order_Products.create({
+        data: {
+          order_id: +order_id,
+          product_id: +product_id,
+          quantity: +quantity,
+        },
+      });
+      res.send(oP);
+    }
   })
 );
 
