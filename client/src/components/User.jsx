@@ -70,7 +70,7 @@ export default function User() {
         <input
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          type="text"
+          type="password"
           placeholder="password"
         />
 
