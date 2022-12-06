@@ -385,7 +385,8 @@ const Products = [
   {
     name: "The Wave Black Cap",
     price: 20,
-    description: "just a black hat lol",
+    description:
+      "Our best selling THE WAVE design, now available on a trucker/mesh cap. Material 60% cotton, 40% polyester.  Structured, six-panel cap with adjustable plastic strap closure.",
     category_id: 6,
     gender_id: 3,
     imageUrl:
@@ -394,7 +395,8 @@ const Products = [
   {
     name: "Astro Pink Cap",
     price: 20,
-    description: "cool hat i guess",
+    description:
+      "One of the most classic and recognisable dad caps.  The astro cap is made in high washed style with an astronaut embroidery and is available.  100% cotton, and lining adjustable cotton strap closure with high quality embroidery stitching.",
     category_id: 6,
     gender_id: 3,
     imageUrl:
@@ -403,7 +405,8 @@ const Products = [
   {
     name: "Astro White Cap",
     price: 20,
-    description: "pink cool hat lol",
+    description:
+      "One of the most classic and recognisable dad caps.  The astro cap is made in high washed style with an astronaut embroidery and is available.  100% cotton, and lining adjustable cotton strap closure with high quality embroidery stitching.",
     category_id: 6,
     gender_id: 3,
     imageUrl:
@@ -412,7 +415,8 @@ const Products = [
   {
     name: "Astro Black Cap",
     price: 20,
-    description: "hola",
+    description:
+      "One of the most classic and recognisable dad caps.  The astro cap is made in high washed style with an astronaut embroidery and is available.  100% cotton, and lining adjustable cotton strap closure with high quality embroidery stitching.",
     category_id: 6,
     gender_id: 3,
     imageUrl:
@@ -421,7 +425,8 @@ const Products = [
   {
     name: "Astro Beige Cap",
     price: 20,
-    description: "Beige i guess",
+    description:
+      "One of the most classic and recognisable dad caps.  The astro cap is made in high washed style with an astronaut embroidery and is available.  100% cotton, and lining adjustable cotton strap closure with high quality embroidery stitching.",
     category_id: 6,
     gender_id: 3,
     imageUrl:
