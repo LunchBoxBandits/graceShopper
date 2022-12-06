@@ -56,7 +56,6 @@ router.patch(
       where: {
         order_id_product_id: { order_id: +order_id, product_id: +product_id },
       },
-
       data: {
         quantity: +quantity,
       },

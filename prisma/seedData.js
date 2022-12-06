@@ -479,7 +479,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084409/GRACE%20SHOPPER/MEN/T-Shirts%20and%20Tops/hmgoepprod_acwuxt.jpg",
   },
   {
-    name: "Women Square Neck Long Sleeve Bodycon Dress",
+    name: " Square Neck Long Sleeve Bodycon Dress",
     price: 200,
     description:
       "You'll look absoluting stunning in the Square Neck Longs Sleeve Bodycon dress in beige! Strechy cotton this classic dress that has a mock neckline, fitted long sleeves and a bodycon silhouette, be in comfort and style with our 1/50 dresses made.",
@@ -489,7 +489,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084694/GRACE%20SHOPPER/WOMEN/Dresses/hmgoepprod_ey7gre.jpg",
   },
   {
-    name: "Womens Midi Long Sleeve Bodycon Dress",
+    name: " Midi Long Sleeve Bodycon Dress",
     price: 200,
     description:
       "You'll look absoluting stunning in the Square Neck Longs Sleeve Bodycon dress in grey! Strechy cotton this classic dress that has a mock neckline, fitted long sleeves and a bodycon silhouette, be in comfort and style with our 1/50 dresses made.",
@@ -499,7 +499,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084690/GRACE%20SHOPPER/WOMEN/Dresses/hmgoepprod_xbssno.jpg",
   },
   {
-    name: "Womens Midi Long Sleeve Bodycon Dress",
+    name: " Midi Long Sleeve Bodycon Dress",
     price: 200,
     description:
       "You'll look absoluting stunning in the Square Neck Longs Sleeve Bodycon dress in brown! Strechy cotton this classic dress that has a mock neckline, fitted long sleeves and a bodycon silhouette, be in comfort and style with our 1/50 dresses made.",
@@ -509,7 +509,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084687/GRACE%20SHOPPER/WOMEN/Dresses/hmgoepprod_ha1clv.jpg",
   },
   {
-    name: "Womens Midi Long Sleeve Bodycon Dress",
+    name: " Midi Long Sleeve Bodycon Dress",
     price: 200,
     description:
       "You'll look absoluting stunning in the Square Neck Longs Sleeve Bodycon dress in black! Strechy cotton this classic dress that has a mock neckline, fitted long sleeves and a bodycon silhouette, be in comfort and style with our 1/50 dresses made.",
@@ -530,7 +530,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084988/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_nr8z5z.jpg",
   },
   {
-    name: "Womens Oversized Zipper Jacket",
+    name: " Oversized Zipper Jacket",
     price: 60,
     description:
       "You will absolutely love this warmth feeling of the cotton inside, our oversized jacket will have you in style in todays times",
@@ -540,7 +540,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084955/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_vnkitn.jpg",
   },
   {
-    name: "Womens Sweater Zipper Jacket",
+    name: " Sweater Zipper Jacket",
     price: 45,
     description:
       "Enjoy the winter time in our grey sweater jacket, with zipper.  Can style with zipper all the way up or down to your liking, stay warm and cozy with our cotton fabric",
@@ -550,7 +550,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084953/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_mkwrzy.jpg",
   },
   {
-    name: "Womens Sweater Zipper Jacket",
+    name: " Sweater Zipper Jacket",
     price: 45,
     description:
       "Our exclusive green sweater jacket will have you in style with some of the top fashionista in the world.  Stay in cozy and warm with our cotton fabric. Style it with zipper to your liking. ",
@@ -560,7 +560,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084950/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_fpmqpi.jpg",
   },
   {
-    name: "Womens Sweater Zipper Jacket",
+    name: " Sweater Zipper Jacket",
     price: 45,
     description:
       "This dark grey jacket gives a hint of mystery added style, zipper to add your flare either open or closed, stay in style and in comfort in our Sweater Jacket",
@@ -570,7 +570,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084947/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_sbcrws.jpg",
   },
   {
-    name: "Womens Sweater Zipper Jacket",
+    name: "Brown Sweater Zipper Jacket",
     price: 45,
     description:
       "Enjoy the winter time in our brown sweater jacket, with zipper.  Can style with zipper all the way up or down to your liking, stay warm and cozy with our cotton fabric",
@@ -580,10 +580,10 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084944/GRACE%20SHOPPER/WOMEN/Hoodies%20and%20SweatShirts/hmgoepprod_lw08fk.jpg",
   },
   {
-    name: "Womens Sweater Zipper Jacket",
+    name: " White Sweater Zipper Jacket",
     price: 45,
     description:
-      "Enjoy the winter time in our brown sweater jacket, with zipper.  Can style with zipper all the way up or down to your liking, stay warm and cozy with our cotton fabric",
+      "Enjoy the winter time in our white sweater jacket, with zipper.  Can style with zipper all the way up or down to your liking, stay warm and cozy with our cotton fabric",
     category_id: 5,
     gender_id: 2,
     imageUrl:
@@ -667,7 +667,7 @@ const Products = [
     price: 98,
     description:
       "Cut with ease and crafted from our washed cotton poplin, this high fashion oversized shirt in black and white will have you stylish at any formal setting. Cut for a loose, relaxed fit with a dropped shoulder.",
-    category_id: 3,
+    category_id: 7,
     gender_id: 2,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084743/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_l2wpeb.jpg",
@@ -677,7 +677,7 @@ const Products = [
     price: 98,
     description:
       "Cut with ease and crafted from our washed cotton poplin, This high fashion oversized shirt in pink will have you the talk of the town.  Cut for a loose, relaxed fit with a dropped shoulder.",
-    category_id: 3,
+    category_id: 7,
     gender_id: 2,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084740/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_rsp4qn.jpg",
@@ -687,27 +687,27 @@ const Products = [
     price: 98,
     description:
       "Cut with ease and crafted from our washed cotton poplin, this high fashion oversized shirt in blue and white will have you stylish at any formal setting. Cut for a loose, relaxed fit with a dropped shoulder.",
-    category_id: 3,
+    category_id: 7,
     gender_id: 2,
     imageUrl:
-      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084737/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_zetoob.jpg",
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084777/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_zetoob.jpg",
   },
   {
     name: "Angelic-The Icon Oversized Shirt",
     price: 98,
     description:
       "Cut with ease and crafted from our washed cotton poplin, This high fashion oversized shirt in brown will have you the talk of the town.  Cut for a loose, relaxed fit with a dropped shoulder",
-    category_id: 3,
+    category_id: 7,
     gender_id: 2,
     imageUrl:
-      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084733/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_dwqg8n.jpg",
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084773/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_dwqg8n.jpg",
   },
   {
     name: "Amery-The Icon Oversized Pinstripe",
     price: 109,
     description:
       "Cut with ease and crafted from our washed cotton poplin, this high fashion oversized shirt in pinstripe will have you stylish at any formal setting. Cut for a loose, relaxed fit with a dropped shoulder.",
-    category_id: 3,
+    category_id: 7,
     gender_id: 2,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084730/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_rdimpz.jpg",
@@ -717,14 +717,14 @@ const Products = [
     price: 109,
     description:
       "Cut with ease and crafted from our washed cotton poplin, This high fashion oversized shirt in white will have you the talk of the town.  Cut for a loose, relaxed fit with a dropped shoulder",
-    category_id: 3,
+    category_id: 7,
     gender_id: 2,
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084727/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_xpejva.jpg",
   },
   //womens t-shirts
   {
-    name: "Women's Classic Crew Neck",
+    name: " Classic Crew Neck",
     price: 35,
     description:
       "An udpated classic with your favorite clean crewneck and short sleeves, supersoft and never ever sheer, a special blend of prima cotton and modal yarns",
@@ -734,7 +734,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084876/GRACE%20SHOPPER/WOMEN/Tops/hmgoepprod_jgns57.jpg",
   },
   {
-    name: "Women's Classic Crew Neck",
+    name: " Classic Crew Neck",
     price: 35,
     description:
       "An updated classic with your favorite clean crewneck and short sleeves,  stay in style with our grey classic t-shirt can wear in the hottests day to stay cool.",
@@ -744,7 +744,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084873/GRACE%20SHOPPER/WOMEN/Tops/hmgoepprod_xndfkb.jpg",
   },
   {
-    name: "Women's Classic Crew Neck Plain Tee",
+    name: " Classic Crew Neck Plain Tee",
     price: 35,
     description:
       "An updated classic with your favorite clean crewneck and short sleeves,  stay in style with our brown classic t-shirt can wear in the hottests day to stay cool.",
@@ -754,7 +754,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084868/GRACE%20SHOPPER/WOMEN/Tops/hmgoepprod_w18qpi.jpg",
   },
   {
-    name: "Women's Classic Crew Neck Plain Tee",
+    name: " Classic Crew Neck Plain Tee",
     price: 35,
     description:
       "An updated classic with your favorite clean crewneck and short sleeves,  stay in style with our white classic t-shirt can wear in the hottests day to stay cool.",
@@ -764,7 +764,7 @@ const Products = [
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084865/GRACE%20SHOPPER/WOMEN/Tops/hmgoepprod_pji0ik.jpg",
   },
   {
-    name: "Women's Classic Crew Neck Plain Tee",
+    name: " Classic Crew Neck Plain Tee",
     price: 35,
     description:
       "An updated classic with your favorite clean crewneck and short sleeves,  stay in style with our black classic t-shirt can wear in the hottests day to stay cool.",

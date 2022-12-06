@@ -13,16 +13,20 @@ export default function useCart() {
     return state.cart.selectedCart;
   });
 
-  const newQuanity = useStoreActions((actions) => {
-    return actions.cart.newQuanity;
+  const editQuantity = useStoreActions((actions) => {
+    return actions.cart.editQuantity;
   });
 
+  const deleteItem = useStoreActions((actions) => {
+    return actions.cart.deleteItem;
+  });
 
   return {
     fetchCart,
     cart,
     addToCart,
     selectedCart,
-    newQuanity,
+    editQuantity,
+    deleteItem,
   };
 }
