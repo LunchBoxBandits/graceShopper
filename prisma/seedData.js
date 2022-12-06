@@ -717,6 +717,57 @@ const Products = [
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084727/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_xpejva.jpg",
   },
+  //womens t-shirts
+  {
+    name: "Women's Classic Crew Neck",
+    price: 35,
+    description:
+      "An udpated classic with your favorite clean crewneck and short sleeves, supersoft and never ever sheer, a special blend of prima cotton and modal yarns",
+    category_id: 7,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084876/GRACE%20SHOPPER/WOMEN/Tops/hmgoepprod_jgns57.jpg",
+  },
+  {
+    name: "Women's Classic Crew Neck",
+    price: 35,
+    description:
+      "An updated classic with your favorite clean crewneck and short sleeves,  stay in style with our grey classic t-shirt can wear in the hottests day to stay cool.",
+    category_id: 7,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084873/GRACE%20SHOPPER/WOMEN/Tops/hmgoepprod_xndfkb.jpg",
+  },
+  {
+    name: "Women's Classic Crew Neck Plain Tee",
+    price: 35,
+    description:
+      "An updated classic with your favorite clean crewneck and short sleeves,  stay in style with our brown classic t-shirt can wear in the hottests day to stay cool.",
+    category_id: 7,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084868/GRACE%20SHOPPER/WOMEN/Tops/hmgoepprod_w18qpi.jpg",
+  },
+  {
+    name: "Women's Classic Crew Neck Plain Tee",
+    price: 35,
+    description:
+      "An updated classic with your favorite clean crewneck and short sleeves,  stay in style with our white classic t-shirt can wear in the hottests day to stay cool.",
+    category_id: 7,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084865/GRACE%20SHOPPER/WOMEN/Tops/hmgoepprod_pji0ik.jpg",
+  },
+  {
+    name: "Women's Classic Crew Neck Plain Tee",
+    price: 35,
+    description:
+      "An updated classic with your favorite clean crewneck and short sleeves,  stay in style with our black classic t-shirt can wear in the hottests day to stay cool.",
+    category_id: 7,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084862/GRACE%20SHOPPER/WOMEN/Tops/hmgoepprod_mnnfjb.jpg",
+  },
 ];
 
 const Categories = [
