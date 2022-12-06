@@ -1,10 +1,10 @@
 import React from "react";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import useCart from "../hooks/useCart";
 import useProducts from "../hooks/useProduct";
 
 export default function Cart({ product }) {
-  const { fetchCart, cart, newQuanity } = useCart();
+  const { fetchCart, cart, editQuantity, deleteItem } = useCart();
   const { selectedProduct } = useProducts();
 
   useEffect(() => {
@@ -24,40 +24,55 @@ export default function Cart({ product }) {
           }
           return (
             <div>
-              <h2> {item.products.name}</h2>
-              <img width={50} height={50} src={item.products.imageUrl} />
+              <h2> {item.products.name}</h2>{" "}
+              <img width={50} height={50} src={item.products.imageUrl} />{" "}
               <div>
                 <button
-                // onClick={async () => {
-                //   try {
-                //     await editCart((item.quantity = item.quantity - 1));
-                //     console.log("quantity is:", item.quantity);
-                //   } catch (error) {
-                //     console.log("error in decreasing value");
-                //   }
-                // }}
+                  onClick={async () => {
+                    console.log("the item quantity is", item.quantity);
+                    if (item.quantity === 1) {
+                      await deleteItem({
+                        order_id: item.order_id,
+                        product_id: item.product_id,
+                      });
+                    } else {
+                      await editQuantity({
+                        order_id: item.order_id,
+                        product_id: item.product_id,
+                        quantity: --item.quantity,
+                      });
+                    }
+                  }}
                 >
                   -
                 </button>
                 Qty: {item.quantity}
                 <button
                   onClick={async () => {
-                    try {
-                      console.log(item.quantity);
-                      await newQuanity({
-                        order_id_product_id: cart.id,
-                        quantity: item.quantity += 1 
-                      });
-                    } catch (error) {
-                      console.log(error);
-                    }
+                    console.log("the item quantity is", item.quantity);
+                    await editQuantity({
+                      order_id: item.order_id,
+                      product_id: item.product_id,
+                      quantity: ++item.quantity,
+                    });
+                    // item.quantity++;
                   }}
                 >
                   +
                 </button>
               </div>
-
-              <h3>${item.products.price}.00</h3>
+              <h3>${item.products.price}.00</h3>{" "}
+              <button
+                onClick={async (e) => {
+                  e.preventDefault();
+                  await deleteItem({
+                    order_id: item.order_id,
+                    product_id: item.product_id,
+                  });
+                }}
+              >
+                X
+              </button>
             </div>
           );
         })}

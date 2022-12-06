@@ -16,7 +16,7 @@ export default function ProductCard({ product, setError }) {
       <h3 className={styles.text}>Description: {product.description}</h3>
 
       <h5 className={styles.price}>Price ${product.price}</h5>
-    
+
       <Button
         variant="contained"
         onClick={async () => {
@@ -24,7 +24,7 @@ export default function ProductCard({ product, setError }) {
             await addToCart({
               order_id: cart.id,
               product_id: product.id,
-              quantity: 4,
+              quantity: 1,
             });
             setError("");
           } catch (err) {
