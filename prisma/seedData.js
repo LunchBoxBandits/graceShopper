@@ -625,6 +625,98 @@ const Products = [
     imageUrl:
       "https://res.cloudinary.com/dsvltch46/image/upload/v1669084795/GRACE%20SHOPPER/WOMEN/Jeans/hmgoepprod_thuvlc.jpg",
   },
+  //lingerie
+  {
+    name: "Cotton Jersey Triangle Bralette",
+    price: 35,
+    description:
+      "A perfect everyday option for a lightweight, comfortable hold, this Triangle Bralette is lined with cotton jersey for softness against skin and a mesh interlining support.",
+    category_id: 3,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669085108/GRACE%20SHOPPER/WOMEN/Lingerie/hmgoepprod_h1ge1x.jpg",
+  },
+  {
+    name: "Cotton Jersey Triangle Bralette",
+    price: 35,
+    description:
+      "A perfect everyday option for a lightweight, comfortable hold, this Triangle Bralette is lined with cotton jersey for softness against skin and a mesh interlining support.",
+    category_id: 3,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669085102/GRACE%20SHOPPER/WOMEN/Lingerie/hmgoepprod_kapkga.jpg",
+  },
+  {
+    name: "Cotton Jersey Triangle Bralette",
+    price: 35,
+    description:
+      "A perfect everyday option for a lightweight, comfortable hold, this Triangle Bralette is lined with cotton jersey for softness against skin and a mesh interlining support.",
+    category_id: 3,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669085100/GRACE%20SHOPPER/WOMEN/Lingerie/hmgoepprod_qutllo.jpg",
+  },
+  //Shirts and Blouses
+  {
+    name: "Angelic-The Icon Oversized Shirt In Stripe",
+    price: 98,
+    description:
+      "Cut with ease and crafted from our washed cotton poplin, this high fashion oversized shirt in black and white will have you stylish at any formal setting. Cut for a loose, relaxed fit with a dropped shoulder.",
+    category_id: 3,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084743/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_l2wpeb.jpg",
+  },
+  {
+    name: "Angelic-The Icon Oversize Shirt",
+    price: 98,
+    description:
+      "Cut with ease and crafted from our washed cotton poplin, This high fashion oversized shirt in pink will have you the talk of the town.  Cut for a loose, relaxed fit with a dropped shoulder.",
+    category_id: 3,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084740/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_rsp4qn.jpg",
+  },
+  {
+    name: "Angelic-The Icon Oversized Shirt In Stripe",
+    price: 98,
+    description:
+      "Cut with ease and crafted from our washed cotton poplin, this high fashion oversized shirt in blue and white will have you stylish at any formal setting. Cut for a loose, relaxed fit with a dropped shoulder.",
+    category_id: 3,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084737/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_zetoob.jpg",
+  },
+  {
+    name: "Angelic-The Icon Oversized Shirt",
+    price: 98,
+    description:
+      "Cut with ease and crafted from our washed cotton poplin, This high fashion oversized shirt in brown will have you the talk of the town.  Cut for a loose, relaxed fit with a dropped shoulder",
+    category_id: 3,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084733/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_dwqg8n.jpg",
+  },
+  {
+    name: "Amery-The Icon Oversized Pinstripe",
+    price: 109,
+    description:
+      "Cut with ease and crafted from our washed cotton poplin, this high fashion oversized shirt in pinstripe will have you stylish at any formal setting. Cut for a loose, relaxed fit with a dropped shoulder.",
+    category_id: 3,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084730/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_rdimpz.jpg",
+  },
+  {
+    name: "Amery-The Icon Oversized Shirt",
+    price: 109,
+    description:
+      "Cut with ease and crafted from our washed cotton poplin, This high fashion oversized shirt in white will have you the talk of the town.  Cut for a loose, relaxed fit with a dropped shoulder",
+    category_id: 3,
+    gender_id: 2,
+    imageUrl:
+      "https://res.cloudinary.com/dsvltch46/image/upload/v1669084727/GRACE%20SHOPPER/WOMEN/Shirts%20and%20Blouses/hmgoepprod_xpejva.jpg",
+  },
 ];
 
 const Categories = [
