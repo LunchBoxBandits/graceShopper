@@ -29,6 +29,7 @@ export default function ProductCard({ product, setError }) {
               product_id: product.id,
               quantity: 1,
             });
+            setError("");
           } catch (err) {
             setError(err.response.data.message);
           }
