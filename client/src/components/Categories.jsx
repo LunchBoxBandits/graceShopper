@@ -31,18 +31,18 @@ export default function Categories() {
   return (
     <>
       {" "}
-       
-      <div className="mx-10 justify-items-center">
-      <h1>categories</h1>
+      <div className="mx-10 justify-center flex flex-col items-center">
+        <h1 className="text-3xl text-customyellow mb-6">categories</h1>
+
         {categories.map((category) => {
           return (
-            <div className="mb-5 items-center">
+            <div className="mb-5 ">
               <button
+                href="#_"
+                class="relative px-6 py-1 overflow-hidden font-medium text-black-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group"
                 onClick={() => {
                   navigate(`/categories/${category.id}`);
                 }}
-                href="#_"
-                class="relative px-0.5 py-0.5 overflow-hidden font-medium text-black-600 bg-gray-100 border border-gray-100 rounded-lg shadow-inner group"
               >
                 <span class="absolute top-0 left-0 w-0 h-0 transition-all duration-200 border-t-2 border-gray-600 group-hover:w-full ease"></span>
                 <span class="absolute bottom-0 right-0 w-0 h-0 transition-all duration-200 border-b-2 border-gray-600 group-hover:w-full ease"></span>
