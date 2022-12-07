@@ -35,6 +35,7 @@ export default function User() {
               setPassword("");
               setFirstName("");
               setLastName("");
+              navigate("/login");
             } catch (err) {
               setError(err.response.data.message);
             }
@@ -45,6 +46,7 @@ export default function User() {
               result = await LoginUser({ email, password });
               setEmail("");
               setPassword("");
+              navigate("/products");
             } catch (err) {
               setError(err.response.data.message);
             }
@@ -68,7 +70,7 @@ export default function User() {
         <input
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          type="text"
+          type="password"
           placeholder="password"
         />
 

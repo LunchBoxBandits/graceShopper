@@ -8,6 +8,7 @@ export default function Cart({ product }) {
   const { fetchCart, cart, editQuantity, deleteItem } = useCart();
   const nav = useNavigate();
   const { selectedProduct } = useProducts();
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetchCart();
@@ -89,6 +90,22 @@ export default function Cart({ product }) {
             nav("/checkout")
           }}
         className="bg-gray-300">Checkout</button>
+      </div>
+      <div>
+        <button
+          onClick={async (e) => {
+            navigate("/checkout");
+          }}
+        >
+          Checkout
+        </button>
+        <button
+          onClick={async (e) => {
+            navigate("/products");
+          }}
+        >
+          Continue Shopping
+        </button>
       </div>
     </>
   );

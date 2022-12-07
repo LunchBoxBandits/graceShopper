@@ -2,6 +2,8 @@ import { useNavigate, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 import useCategories from "../hooks/useCategory";
 import useProducts from "../hooks/useProduct";
+import Carousel from "./Carousel";
+
 export default function Categories() {
   const [prodId, setProdId] = useState("");
   const prodIds = useParams();
@@ -29,8 +31,9 @@ export default function Categories() {
   // console.log("selectedCategory inside categories jsx", selectedCategory);
   return (
     <>
+      {" "}
+      <Carousel />
       <div>
-        Hello World
         {categories.map((category) => {
           return (
             <div>

@@ -8,12 +8,13 @@ import Home from "./components/HomePage";
 import Cart from "./components/Cart";
 import Categories from "./components/Categories";
 import SingleCategory from "./components/SingleCategory";
+import "tw-elements";
 
 import PaymentPage from "./components/PaymentPage"
 
 function App() {
   return (
-    <div>
+    <div className="bg-[url('/src/assets/ronan-furuta-ZJ8M0bfiu8U-unsplash.jpg')]">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
