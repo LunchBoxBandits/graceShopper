@@ -5,45 +5,60 @@ import useCart from "../hooks/useCart";
 
 function NavBar() {
   const { LogoutUser, selectedUser, fetchMe } = useUsers();
-  const { fetchCart} = useCart()
+  const { fetchCart } = useCart();
   const navigate = useNavigate();
- 
 
-  useEffect(()=>{
-    fetchMe().then(()=>{
+  useEffect(() => {
+    fetchMe().then(() => {
       fetchCart();
-    })
-  },[]);
+    });
+  }, []);
 
   return (
-    <nav className="bg-black text-white h-10 ">
-      <div className="flex flex-row justify-center space-x-32 space-y-4">
-        <p>LUNCH BOX BANDIDOS</p>
-        <p> Welcome, {selectedUser.email}</p>
-        <Link to="/products">Home</Link>
-        {selectedUser.email === "Guest" ? (
-          <>
-            <Link to="/register">Register</Link>
-
-            <Link to="/login">Login</Link>
-          </>
-        ) : null}
-        {selectedUser.email !== "Guest" ? (
-          <>
-            <Link
-              onClick={() => {
-                LogoutUser();
-                navigate("/products");
-                window.location.reload(true);
-              }}
-            >
-              Logout
-            </Link>
-            <Link to="/Cart">Cart</Link>
-          </>
-        ) : null}
+    <>
+      <div className="flex justify-center text-white bg-black opacity-80">
+        Winter Deals! Free Shipping on Orders Over $2209
       </div>
-    </nav>
+      <nav className=" h-12 text-white ">
+        <div className="flex flex-row justify-center space-x-32 gap-y-4 ">
+          <p className="font-bold flex"> Welcome, {selectedUser.email}</p>
+          <h1 className="font-bold text-2xl flex space-y-20 ">
+            REAL FAKE CLOTHES
+          </h1>
+          <Link className="font-bold flex" to="/products">
+            Home
+          </Link>
+          {selectedUser.email === "Guest" ? (
+            <>
+              <Link className="font-bold flex" to="/register">
+                Register
+              </Link>
+
+              <Link className="font-bold flex" to="/login">
+                Sign in
+              </Link>
+            </>
+          ) : null}
+          {selectedUser.email !== "Guest" ? (
+            <>
+              <Link
+                className="font-bold flex"
+                onClick={() => {
+                  LogoutUser();
+                  navigate("/products");
+                  window.location.reload(true);
+                }}
+              >
+                Logout
+              </Link>
+              <Link className="font-bold flex" to="/Cart">
+                Cart
+              </Link>
+            </>
+          ) : null}
+        </div>
+      </nav>
+    </>
   );
 }
 
