@@ -9,6 +9,8 @@ import Cart from "./components/Cart";
 import Categories from "./components/Categories";
 import SingleCategory from "./components/SingleCategory";
 
+import PaymentPage from "./components/PaymentPage"
+
 function App() {
   return (
     <div>
@@ -20,6 +22,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/:categoryId" element={<SingleCategory />} />
+        <Route path="/checkout" element={<PaymentPage/>} />
       </Routes>
     </div>
   );

@@ -2,9 +2,11 @@ import React from "react";
 import { useEffect, useState } from "react";
 import useCart from "../hooks/useCart";
 import useProducts from "../hooks/useProduct";
+import { useNavigate } from "react-router-dom";
 
 export default function Cart({ product }) {
   const { fetchCart, cart, editQuantity, deleteItem } = useCart();
+  const nav = useNavigate();
   const { selectedProduct } = useProducts();
 
   useEffect(() => {
@@ -82,6 +84,11 @@ export default function Cart({ product }) {
           Total: $
           {(cart.total = cart.total + Math.floor(cart.total * 0.0925) / 2)}
         </h4>
+        <button
+          onClick={()=>{
+            nav("/checkout")
+          }}
+        className="bg-gray-300">Checkout</button>
       </div>
     </>
   );
