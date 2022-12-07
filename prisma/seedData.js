@@ -794,7 +794,7 @@ const Categories = [
   },
   {
     id: 5,
-    name: "Hoodies_and_Sweaters",
+    name: "Hoodies",
   },
   {
     id: 6,
@@ -866,7 +866,7 @@ const Payment_Details = [
     nameOnCard: "ferni",
     cardNumber: "2222405343248877",
     experationDate: "12/32",
-    cvc: 234,
+    cvc: "234",
   },
 ];
 

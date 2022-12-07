@@ -85,7 +85,7 @@ const seedDb = async () => {
   console.log("creating Payment_Details");
   await Promise.all(
     Payment_Details.map(async (payment) => {
-      return prisma.Payment_Details.create({
+      return prisma.payment_Details.create({
         data: payment,
       });
     })

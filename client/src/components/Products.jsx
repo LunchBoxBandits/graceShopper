@@ -5,11 +5,11 @@ import Categories from "./Categories";
 import styles from "../syles/Products.module.css";
 import useCart from "../hooks/useCart";
 import useUsers from "../hooks/useUsers";
+import Carousel from "./Carousel";
 
 export default function Products() {
   const { products, fetchProducts } = useProducts();
   const { createOrderswithProduct } = useCart();
-  const { selectedUser } = useUsers();
   const [error, setError] = useState();
 
   useEffect(() => {
@@ -18,23 +18,31 @@ export default function Products() {
   return (
     <>
       {" "}
-      <div>
-        {" "}
-        <Categories />
-      </div>
-      <div>{error && <h1>{error}</h1>}</div>
-      <div className={styles.card}>
-        {products.map((product) => {
-          return (
-            <ProductCard
-              product={product}
-              createOrderswithProduct={createOrderswithProduct}
-              error={error}
-              setError={setError}
-            />
-          );
-        })}
-      </div>
+      <section className="bg-black">
+        <Carousel />
+      </section>
+
+      <section className={styles.page2} >
+        <div >
+          {" "}
+          <Categories />
+        </div>
+
+        <div>{error && <h1>{error}</h1>}</div>
+
+        <div className={styles.card}>
+          {products.map((product) => {
+            return (
+              <ProductCard
+                product={product}
+                createOrderswithProduct={createOrderswithProduct}
+                error={error}
+                setError={setError}
+              />
+            );
+          })}
+        </div>
+      </section>
     </>
   );
 }

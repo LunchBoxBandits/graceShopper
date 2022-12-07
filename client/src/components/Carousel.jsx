@@ -3,6 +3,8 @@ import suits from "../assets/row-of-suits.jpg";
 import styles from "../syles/Carousel.module.css";
 export default function Carousel() {
   return (
+
+    
     <div
       id="carouselExampleIndicators"
       class="carousel slide relative"
