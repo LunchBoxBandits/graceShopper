@@ -42,4 +42,13 @@ export const cart = {
     const { data } = await axios.get("/api/users/me/cart");
     actions.setCart(data);
   }),
+  addPurchase:action((state, payload)=>{
+    state.data.push(payload);
+  }),
+  makingPurchase: thunk(async(actions, payload)=>{
+    const {data} = await axios.post("/api/payment_details", payload)
+    actions.addPurchase(data)
+  })
+
+
 };

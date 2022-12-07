@@ -10,6 +10,8 @@ import Categories from "./components/Categories";
 import SingleCategory from "./components/SingleCategory";
 import "tw-elements";
 
+import PaymentPage from "./components/PaymentPage"
+
 function App() {
   return (
     <div className="bg-[url('/src/assets/ronan-furuta-ZJ8M0bfiu8U-unsplash.jpg')]">
@@ -21,6 +23,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/:categoryId" element={<SingleCategory />} />
+        <Route path="/checkout" element={<PaymentPage/>} />
       </Routes>
     </div>
   );

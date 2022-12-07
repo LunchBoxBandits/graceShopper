@@ -65,7 +65,7 @@ model Payment_Details {
   nameOnCard String
   cardNumber String
   experationDate String 
-  cvc Int 
+  cvc String 
   amount Int
   provider String
 }
