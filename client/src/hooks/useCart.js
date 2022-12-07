@@ -20,6 +20,9 @@ export default function useCart() {
   const deleteItem = useStoreActions((actions) => {
     return actions.cart.deleteItem;
   });
+  const makingPurchase = useStoreActions((actions)=>{
+    return actions.cart.makingPurchase
+  })
 
   return {
     fetchCart,
@@ -28,5 +31,6 @@ export default function useCart() {
     selectedCart,
     editQuantity,
     deleteItem,
+    makingPurchase
   };
 }

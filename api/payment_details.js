@@ -24,4 +24,15 @@ router.get(
   })
 );
 
+router.post(
+  "/",
+  asyncErrorHandler(async (req, res, next) => {
+    const {order_id, amount, provider, cardNumber,cvc,experationDate,nameOnCard } = req.body
+    const postCardInfo = await prisma.payment_Details.create({
+      data:{order_id, amount, provider, cardNumber,cvc,experationDate,nameOnCard},
+    });
+    res.send(postCardInfo);
+  })
+);
+
 module.exports = router;
