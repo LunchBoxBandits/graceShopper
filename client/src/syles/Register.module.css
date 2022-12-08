@@ -1,0 +1,16 @@
+.everyinput{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10em;
+    align-items: center;
+    
+}
+
+.one{
+    display:flex;
+    margin-bottom: 3em;
+}
+
+.two{
+   margin-right: 1em;
+}
