@@ -5,7 +5,7 @@ import useCart from "../hooks/useCart";
 
 function NavBar() {
   const { LogoutUser, selectedUser, fetchMe } = useUsers();
-  const { fetchCart } = useCart();
+  const { fetchCart, cart } = useCart();
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -13,6 +13,13 @@ function NavBar() {
       fetchCart();
     });
   }, []);
+
+  let total = 0;
+  cart.order_products?.map((item) => {
+    {
+      total += item.quantity;
+    }
+  });
 
   return (
     <>
@@ -52,7 +59,7 @@ function NavBar() {
                 Logout
               </Link>
               <Link className="font-bold flex" to="/Cart">
-                Cart
+                Cart ({total})
               </Link>
             </>
           ) : null}

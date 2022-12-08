@@ -9,11 +9,11 @@ import Cart from "./components/Cart";
 import Categories from "./components/Categories";
 import SingleCategory from "./components/SingleCategory";
 import "tw-elements";
-import PaymentPage from "./components/PaymentPage"
+import PaymentPage from "./components/PaymentPage";
 
 function App() {
   return (
-    <div  className="bg-[url('/src/assets/ronan-furuta-ZJ8M0bfiu8U-unsplash.jpg')]">
+    <div className="bg-[url('/src/assets/ronan-furuta-ZJ8M0bfiu8U-unsplash.jpg')] min-h-screen">
       <NavBar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -22,7 +22,7 @@ function App() {
         <Route path="/cart" element={<Cart />} />
         <Route path="/categories" element={<Categories />} />
         <Route path="/categories/:categoryId" element={<SingleCategory />} />
-        <Route path="/checkout" element={<PaymentPage/>} />
+        <Route path="/checkout" element={<PaymentPage />} />
       </Routes>
     </div>
   );
