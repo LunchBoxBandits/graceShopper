@@ -794,7 +794,7 @@ const Categories = [
   },
   {
     id: 5,
-    name: "Hoodies_and_Sweaters",
+    name: "Hoodies",
   },
   {
     id: 6,

@@ -1,22 +1,43 @@
+html,body{
+    margin: 0 ;
+    height:100%;
+    width:100%;
+    padding:0;
+
+}
+section {
+    display: block;
+    height:100%;
+    width:100%;
+    padding: 100px;
+    padding-left: 0px;
+    padding-right:0px;
+    box-sizing:border-box;
+}
+
+.page2{
+    display:flex;
+    margin-top:0px;
+}
+
 .card{
     display: flex;
     flex-wrap: wrap;
 }
 .allProducts{
-    background-color: black;
+    background-color:white;
     display:flex;
     flex-direction: column;
     margin-top:2%;
     margin-left:2%;
-    width:25em;
+    border-radius: 11px;
 }
-
-.imag{
-    display: block;
-    width:50%;
-    height:50%;
-    margin-left: auto;
-    margin-right: auto;
+.img{
+    justify-content: center;
+    align-content: center;
+    height: 14em;
+    width:14em;
+    margin-left: 1em;
 }
 
 .text{
@@ -30,4 +51,4 @@
     font-weight: bold;
     font-size: medium;
 }
-
+ 
