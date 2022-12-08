@@ -15,7 +15,7 @@
     "@google-pay/button-react": "^3.0.0",
     "@mui/icons-material": "^5.10.16",
     "@mui/joy": "^5.0.0-alpha.57",
-    "@mui/material": "^5.10.16",
+    "@mui/material": "^5.10.17",
     "@stripe/react-stripe-js": "^1.16.0",
     "@stripe/stripe-js": "^1.46.0",
     "axios": "^1.2.0",
