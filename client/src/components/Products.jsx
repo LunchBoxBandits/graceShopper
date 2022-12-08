@@ -4,7 +4,6 @@ import ProductCard from "./ProductCard";
 import Categories from "./Categories";
 import styles from "../syles/Products.module.css";
 import useCart from "../hooks/useCart";
-import useUsers from "../hooks/useUsers";
 import Carousel from "./Carousel";
 
 export default function Products() {
