@@ -29,8 +29,8 @@ function NavBar() {
       <nav className=" h-12 text-white ">
         <div className="flex flex-row justify-center space-x-32 gap-y-4 ">
           <p className="font-bold flex"> Welcome, {selectedUser.email}</p>
-          <h1 className="font-bold text-2xl flex space-y-20 ">
-            REAL FAKE CLOTHES
+          <h1 className="font-bebas text-3xl text-bold underline">
+            Real Fake Clothes
           </h1>
           <Link className="font-bold flex" to="/products">
             Home
