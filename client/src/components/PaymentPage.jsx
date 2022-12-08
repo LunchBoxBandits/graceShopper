@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import GooglePayButton from "@google-pay/button-react";
 
 import useCart from "../hooks/useCart";
 
