@@ -4,13 +4,14 @@ import useProducts from "../hooks/useProduct";
 import { useParams } from "react-router-dom";
 import ProductCard from "./ProductCard";
 import Categories from "./Categories";
+import styles from "../syles/Products.module.css";
+
 export default function SingleCategory() {
   const [prodId, setProdId] = useState("");
   const prodIds = useParams();
   const { fetchCategories } = useCategories();
   const { products, fetchProducts } = useProducts();
 
-  
   useEffect(() => {
     fetchCategories();
   }, []);
@@ -31,20 +32,23 @@ export default function SingleCategory() {
   // console.log("prodId inside singlecategory", prodId);
   console.log("CategoryProducts", CategoryProducts);
   return (
-    <>
-      <div>
-        <Categories />
+    <div>
+      <div className={styles.page2}>
+        <div>
+          <Categories />
+        </div>
+
+        <div className={styles.card}>
+
+          {CategoryProducts.map((product) => {
+            return (
+              <div >
+                <ProductCard product={product} />
+              </div>
+            );
+          })}
+        </div>
       </div>
-      <div>
-        {CategoryProducts.map((product) => {
-          return (
-            <div>
-              <ProductCard product={product} />
-            </div>
-          );
-        })}
-      </div>
-      ;
-    </>
+    </div>
   );
 }

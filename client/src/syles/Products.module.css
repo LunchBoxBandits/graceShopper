@@ -29,12 +29,14 @@ section {
     display:flex;
     flex-direction: column;
     margin-top:2%;
-    margin-left:2%;
-    border-radius: 11px;
+    margin-left:5%;
+    margin-right:1em;
+    margin-bottom:2em;
+    border-radius:16px;
 }
 
 .card:hover .allProducts{
-    filter:blur(1px);
+    filter:blur(0.8px);
 }
 
 .card .allProducts:hover{
@@ -44,9 +46,6 @@ section {
     color:white;
     transition:1s;
 }
-
-
-
 
 .img{
     justify-content: center;
