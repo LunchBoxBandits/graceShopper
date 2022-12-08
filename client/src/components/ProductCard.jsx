@@ -43,17 +43,21 @@ export default function ProductCard({ product, setError }) {
             }
           }}
           sx={{
-            color: "dark",
-            background: "blue",
+            color: "black",
+            background: "yellow",
             width: 128,
             height: 50,
             display: "inline",
             fontWeight: "bold",
             mx: "auto",
             fontSize: 10,
+            "&:hover":{
+              color:"black"
+            },
+            hover:{color:"black"}
           }}
         >
-          add to cart
+          add to cart<AddShoppingCartOutlinedIcon/>
         </Button>
       </Box>
     </Card>

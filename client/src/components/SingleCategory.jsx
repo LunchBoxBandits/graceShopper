@@ -10,6 +10,7 @@ export default function SingleCategory() {
   const { fetchCategories } = useCategories();
   const { products, fetchProducts } = useProducts();
 
+  
   useEffect(() => {
     fetchCategories();
   }, []);

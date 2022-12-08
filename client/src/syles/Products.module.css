@@ -32,6 +32,22 @@ section {
     margin-left:2%;
     border-radius: 11px;
 }
+
+.card:hover .allProducts{
+    filter:blur(1px);
+}
+
+.card .allProducts:hover{
+    filter: blur(0px);
+    background-color: black;
+    transform: scale(1.1);
+    color:white;
+    transition:1s;
+}
+
+
+
+
 .img{
     justify-content: center;
     align-content: center;
