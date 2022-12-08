@@ -1,6 +1,5 @@
 import styles from "../syles/Homepage.module.css";
 import { useNavigate } from "react-router-dom";
-import Button from "@mui/joy/Button";
 import wilson from "../assets/wilson pfp.jpeg";
 import ferni from "../assets/fernando pfp.png";
 import ugo from "../assets/ugonna pfp.png";

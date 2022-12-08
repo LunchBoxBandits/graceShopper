@@ -15,7 +15,10 @@ export default function Cart({ product }) {
   // console.log("cart in the Cart.jsx", cart);
 
   return (
-    <>
+    <div
+      class="border-8
+                text-white"
+    >
       <h1> Shopping Cart</h1>
       <div>
         {cart.order_products?.map((item) => {
@@ -25,68 +28,75 @@ export default function Cart({ product }) {
             cart.total += item.products.price * (item.quantity / 2);
           }
           return (
-            <div>
-              <h2> {item.products.name}</h2>{" "}
-              <img width={50} height={50} src={item.products.imageUrl} />{" "}
-              <div>
-                <button
-                  onClick={async () => {
-                    console.log("the item quantity is", item.quantity);
-                    if (item.quantity === 1) {
-                      await deleteItem({
-                        order_id: item.order_id,
-                        product_id: item.product_id,
-                      });
-                    } else {
+            <div
+              class="display flex
+                    "
+            >
+              <div className="border w-full">
+                <h2> {item.products.name}</h2>{" "}
+                <img width={50} height={50} src={item.products.imageUrl} />{" "}
+                <div>
+                  <button
+                    onClick={async () => {
+                      console.log("the item quantity is", item.quantity);
+                      if (item.quantity === 1) {
+                        await deleteItem({
+                          order_id: item.order_id,
+                          product_id: item.product_id,
+                        });
+                      } else {
+                        await editQuantity({
+                          order_id: item.order_id,
+                          product_id: item.product_id,
+                          quantity: --item.quantity,
+                        });
+                      }
+                    }}
+                  >
+                    -
+                  </button>
+                  Qty: {item.quantity}
+                  <button
+                    onClick={async () => {
+                      console.log("the item quantity is", item.quantity);
                       await editQuantity({
                         order_id: item.order_id,
                         product_id: item.product_id,
-                        quantity: --item.quantity,
+                        quantity: ++item.quantity,
                       });
-                    }
-                  }}
-                >
-                  -
-                </button>
-                Qty: {item.quantity}
+                      // item.quantity++;
+                    }}
+                  >
+                    +
+                  </button>
+                </div>
+                <h3 class="absolute right-5">${item.products.price}.00</h3>{" "}
                 <button
-                  onClick={async () => {
-                    console.log("the item quantity is", item.quantity);
-                    await editQuantity({
+                  class="text-red-600"
+                  onClick={async (e) => {
+                    e.preventDefault();
+                    await deleteItem({
                       order_id: item.order_id,
                       product_id: item.product_id,
-                      quantity: ++item.quantity,
                     });
-                    // item.quantity++;
                   }}
                 >
-                  +
+                  remove
                 </button>
               </div>
-              <h3>${item.products.price}.00</h3>{" "}
-              <button
-                onClick={async (e) => {
-                  e.preventDefault();
-                  await deleteItem({
-                    order_id: item.order_id,
-                    product_id: item.product_id,
-                  });
-                }}
-              >
-                X
-              </button>
             </div>
           );
         })}
       </div>
       <div>
-        <h4>
+        <h4 class="absolute right-5">
           Total: $
           {(cart.total = cart.total + Math.floor(cart.total * 0.0925) / 2)}
         </h4>
       </div>
-      <div>
+      <div class="mr-auto">
         <button
+          class="bg-red-700"
           onClick={async (e) => {
             navigate("/checkout");
           }}
@@ -94,6 +104,7 @@ export default function Cart({ product }) {
           Checkout
         </button>
         <button
+          class="bg-black"
           onClick={async (e) => {
             navigate("/products");
           }}
@@ -101,6 +112,6 @@ export default function Cart({ product }) {
           Continue Shopping
         </button>
       </div>
-    </>
+    </div>
   );
 }

@@ -1,7 +1,6 @@
 import useCart from "../hooks/useCart";
 //CSS STUFF
 import styles from "../syles/Products.module.css";
-import AspectRatio from "@mui/joy/AspectRatio";
 import Box from "@mui/joy/Box";
 import Button from "@mui/joy/Button";
 import Card from "@mui/joy/Card";
