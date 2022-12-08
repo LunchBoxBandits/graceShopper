@@ -25,20 +25,19 @@ section {
     flex-wrap: wrap;
 }
 .allProducts{
-    background-color: gray;
+    background-color:white;
     display:flex;
     flex-direction: column;
     margin-top:2%;
     margin-left:2%;
-    width:25em;
+    border-radius: 11px;
 }
-
-.imag{
-    display: block;
-    width:50%;
-    height:50%;
-    margin-left: auto;
-    margin-right: auto;
+.img{
+    justify-content: center;
+    align-content: center;
+    height: 14em;
+    width:14em;
+    margin-left: 1em;
 }
 
 .text{

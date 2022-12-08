@@ -17,14 +17,14 @@ export default function Products() {
   }, []);
   return (
     <>
-      {" "}
+      
       <section className="bg-black">
         <Carousel />
       </section>
 
       <section className={styles.page2} >
         <div >
-          {" "}
+          
           <Categories />
         </div>
 
