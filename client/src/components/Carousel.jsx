@@ -1,10 +1,9 @@
 import femalehat from "../assets/female-model-hat.jpg";
 import suits from "../assets/row-of-suits.jpg";
 import styles from "../syles/Carousel.module.css";
+import logo from "../assets/Real Fake Clothes Logo.png";
 export default function Carousel() {
   return (
-
-    
     <div
       id="carouselExampleIndicators"
       class="carousel slide relative"
@@ -35,11 +34,18 @@ export default function Carousel() {
       <div class="carousel-inner relative w-full overflow-hidden">
         <div class="carousel-item active float-left w-full">
           <div class="text-white justify-items-start m-48">
-            <h1 class="font-bold text-3xl my-4">Lorem ipsum dolor</h1>
+            <h1 class="font-bold text-3xl my-4">Risk Free!</h1>
             <p class="w-2/5 my-4">
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Totam
-              necessitatibus molestiae odit perspiciatis voluptates quidem..
+              Keep the good stuff at home while you battle the elements in our
+              real fake clothes!
             </p>{" "}
+            <p className="text-xl text-customyellow">Stains?</p>{" "}
+            <p className="text-xl text-customyellow">Irreversable damages?</p>
+            <p> No worries just buy more real fake clothes!</p>{" "}
+            <img
+              src={logo}
+              className="absolute flex top-0  right-10 rounded-full opacity-90"
+            />
             <button class="inline-flex items-center justify-center px-4 py-2 text-base font-bold  leading-6 text-amber-400 whitespace-no-wrap bg-stone-100 border border-black rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
               {" "}
               read more
@@ -47,13 +53,12 @@ export default function Carousel() {
           </div>
         </div>
         <div class="carousel-item float-left w-full">
-          <p className="text-white absolute top-1/2 left-1/2 transform -translate-x-1/4 -translate-y-1/2 text-6xl m-20 ">
-            ONLINE SHOPPING
-          </p>
-          <p className="text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2  m-36">
-            {" "}
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-          </p>
+          <div className=" absolute top-1/2 left-1/2 transform -translate-x-1/4 -translate-y-1/2 text-6xl m-20 font-bebas ">
+            <h1 className="text-white opacity-70 "> ONLINE SHOPPING</h1>
+            <h1 className="text-customyellow opacity-80 "> ONLINE SHOPPING</h1>
+            <h1 className="text-black opacity-90">ONLINE SHOPPING</h1>
+          </div>
+
           <img
             src={femalehat}
             class="block w-full"
@@ -63,7 +68,7 @@ export default function Carousel() {
         </div>
         <div class="carousel-item float-left w-full h-5/6">
           {" "}
-          <p className="text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-6xl ">
+          <p className="text-white absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-9xl font-bebas ">
             SUITS
           </p>
           <img

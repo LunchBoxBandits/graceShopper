@@ -14,6 +14,9 @@ module.exports = {
       colors: {
         customyellow: "#fff700",
       },
+      fontFamily: {
+        bebas: ["Bebas Neue", "cursive"],
+      },
     },
   },
   plugins: [require("tw-elements/dist/plugin")],
