@@ -44,7 +44,7 @@ export default function Carousel() {
             <p> No worries just buy more real fake clothes!</p>{" "}
             <img
               src={logo}
-              className="absolute flex top-0  right-10 rounded-full opacity-90"
+              className="absolute flex top-0  right-10 rounded-full opacity-90 w-60 md:w-auto"
             />
             <button class="inline-flex items-center justify-center px-4 py-2 text-base font-bold  leading-6 text-amber-400 whitespace-no-wrap bg-stone-100 border border-black rounded-md shadow-sm hover:bg-gray-50 focus:outline-none focus:shadow-none">
               {" "}

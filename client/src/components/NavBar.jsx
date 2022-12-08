@@ -23,13 +23,13 @@ function NavBar() {
 
   return (
     <>
-      <div className="flex justify-center text-white bg-black opacity-80">
+      <div className="flex justify-center text-white bg-black opacity-80 ">
         Winter Deals! Free Shipping on Orders Over $2209
       </div>
       <nav className=" h-12 text-white ">
-        <div className="flex flex-row justify-center space-x-32 gap-y-4 ">
+        <div className="flex flex-row justify-center md:space-x-32 gap-y-4 w-full md:w-full">
           <p className="font-bold flex"> Welcome, {selectedUser.email}</p>
-          <h1 className="font-bebas text-3xl text-bold underline">
+          <h1 className="font-bebas text-3xl text-bold underline opacity-0 md:opacity-100">
             Real Fake Clothes
           </h1>
           <Link className="font-bold flex" to="/products">
