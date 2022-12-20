@@ -1,16 +1,18 @@
-# fly.toml file generated for autumn-frost-6193 on 2022-12-14T21:25:47-08:00
+# fly.toml file generated for snowy-meadow-8114 on 2022-12-20T11:22:53-06:00
 
-app = "autumn-frost-6193"
+app = "snowy-meadow-8114"
 kill_signal = "SIGINT"
 kill_timeout = 5
 processes = []
 
-[deploy]
-  release_command = "npx prisma migrate deploy"
-
+[build]
+  builder = "heroku/buildpacks:20"
 
 [env]
   PORT = "8080"
+
+[deploy]
+  release_command = "npx prisma db seed"
 
 [experimental]
   allowed_public_ports = []
