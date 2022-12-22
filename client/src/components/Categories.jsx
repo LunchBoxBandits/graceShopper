@@ -31,8 +31,8 @@ export default function Categories() {
   return (
     <>
       {" "}
-      <div className="mx-10 justify-center flex flex-col items-center">
-        <h1 className="text-3xl text-customyellow mb-6">categories</h1>
+      <div className="mx-10 justify-center flex flex-col items-center ">
+        <h1 className="text-3xl text-pyellow mb-6">Categories</h1>
 
         {categories.map((category) => {
           return (

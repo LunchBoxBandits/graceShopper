@@ -15,6 +15,9 @@ module.exports = {
       },
       colors: {
         customyellow: "#fff700",
+        pblue: "#14213D",
+        pyellow: "#FCA311",
+        pgray: "#E5E5E5",
       },
       fontFamily: {
         bebas: ["Bebas Neue", "cursive"],

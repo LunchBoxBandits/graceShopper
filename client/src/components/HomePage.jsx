@@ -9,42 +9,12 @@ function Home() {
     <div>
       {/* this is the div for the nav */}
       <div></div>
-
       {/* div to put image to the left */}
       <div></div>
-
       {/* put the wording to the right  */}
-      <div className="flex justify-center flex-row m-20 bg-black m-12 items-center p-6">
-        <div className="flex flex-col items-center  ">
-          <img
-            className="flex items-center justify-center relative rounded-full h-24 "
-            src={wilson}
-            alt="model"
-          />
-          <p className="text-white text-3xl justify-center mr-4">Wilson Chen</p>
-        </div>
-        <div className="flex flex-col items-center gap-x-8">
-          <img
-            className="flex items-center justify-center relative rounded-full h-24 "
-            src={ferni}
-            alt="model"
-          />
-          <p className="text-white text-3xl justify-center mr-4">
-            Fernando Reyes
-          </p>
-        </div>
-        <div className="flex flex-col items-center gap-x-8">
-          <img
-            className="flex items-center justify-center relative rounded-full h-24 "
-            src={ugo}
-            alt="model"
-          />
-          <p className="text-white text-3xl justify-center">Ugonna Duru</p>
-        </div>
-      </div>
       <div className={styles.text}>
         <h1 className={styles.title}>Real Fake Clothes</h1>
-        <h4 className="text-customyellow">2209 Capstone Project</h4>
+        <h4 className="text-pyellow text-2xl">2209 Capstone Project</h4>
 
         <button
           href="#_"
@@ -69,8 +39,79 @@ function Home() {
               ></path>
             </svg>
           </span>
-          <span class="relative">Shop Now</span>
+          <span class="relative p-4 ">Shop Now</span>
         </button>
+      </div>{" "}
+      <div className="flex flex-row items-center justify-center text-pgray absolute bottom-0 w-full items-center p-6 bg-black">
+        <div className="flex flex-col items-center">
+          <img
+            className="flex items-center justify-center relative rounded-full h-24 "
+            src={wilson}
+            alt="model"
+          />
+          <p className=" text-3xl justify-center mr-4">Wilson Chen</p>
+          <div>
+            <a
+              href="https://github.com/Wilsonrchen"
+              className="hover:text-pyellow p-2"
+            >
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/wilsonrchen/"
+              className="hover:text-pyellow p-2"
+            >
+              {" "}
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-x-8">
+          <img
+            className="flex items-center justify-center relative rounded-full h-24 "
+            src={ferni}
+            alt="model"
+          />
+          <p className=" text-3xl justify-center mr-4">Fernando Reyes</p>
+          <div>
+            <a
+              href="https://github.com/unkn3wn"
+              className="hover:text-pyellow p-2"
+            >
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/fernando-reyes-673860240/"
+              className="hover:text-pyellow p-2"
+            >
+              {" "}
+              LinkedIn
+            </a>
+          </div>
+        </div>
+        <div className="flex flex-col items-center gap-x-8">
+          <img
+            className="flex items-center justify-center relative rounded-full h-24 "
+            src={ugo}
+            alt="model"
+          />
+          <p className=" text-3xl justify-center">Ugonna Duru</p>
+          <div>
+            <a
+              href="https://github.com/Uduru10"
+              className="hover:text-pyellow p-2"
+            >
+              Github
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ugo-duru-780aa6257/"
+              className="hover:text-pyellow p-2"
+            >
+              {" "}
+              LinkedIn
+            </a>
+          </div>
+        </div>
       </div>
     </div>
   );

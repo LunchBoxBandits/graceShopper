@@ -1,35 +1,35 @@
 .sepImgWord {
   display: flex;
-  margin-top:5%;
-  margin-left:1%;
+  margin-top: 5%;
+  margin-left: 1%;
 }
 .manPic {
   width: 30em;
   height: 80%;
 }
 
-.text{
-    margin-top: 12em;
-    margin-left:20%;
-    text-align: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    word-spacing: 1mm;
-
+.text {
+  margin-top: 12em;
+  margin-left: 20%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  word-spacing: 1mm;
 }
 
 .title {
-  color: black;
+  color: #14213d;
   text-align: center;
-  font-size: 50px;
+  font-size: 70px;
   font-weight: bolder;
+  border-bottom: solid 3px black;
+  margin-bottom: 4px;
 }
 
-.shopButton{
-    font-weight: bolder;
-    margin-top: 15em;
-    height: 4rem;
-    width:8em;
-
+.shopButton {
+  font-weight: bolder;
+  margin-top: 15em;
+  height: 4rem;
+  width: 8em;
 }

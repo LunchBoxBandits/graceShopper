@@ -17,9 +17,9 @@ export default function Cart({ product }) {
   return (
     <div
       class="border-8
-                text-white"
+                text-white m-32"
     >
-      <h1> Shopping Cart</h1>
+      <h1 className="text-black text-3xl mb-4"> Shopping Cart</h1>
       <div>
         {cart.order_products?.map((item) => {
           console.log("inside the cart map:", cart.order_products);
@@ -32,11 +32,19 @@ export default function Cart({ product }) {
               class="display flex
                     "
             >
-              <div className="border w-full">
-                <h2> {item.products.name}</h2>{" "}
-                <img width={50} height={50} src={item.products.imageUrl} />{" "}
-                <div>
+              <div className="border w-full bg-white text-pblue mb-4 rounded-16 shadow-2xl ">
+                <div className="flex relative">
+                  {" "}
+                  <img
+                    width={200}
+                    height={100}
+                    src={item.products.imageUrl}
+                  />{" "}
+                  <h2 className="text-3xl"> {item.products.name}</h2>
+                </div>
+                <div className="flex justify-end mr-16">
                   <button
+                    className="border p-1 text-indigo-400 rounded-full"
                     onClick={async () => {
                       console.log("the item quantity is", item.quantity);
                       if (item.quantity === 1) {
@@ -55,8 +63,9 @@ export default function Cart({ product }) {
                   >
                     -
                   </button>
-                  Qty: {item.quantity}
+                  <p className="border p-2">{item.quantity}</p>
                   <button
+                    className="border p-1 text-indigo-400 rounded-full"
                     onClick={async () => {
                       console.log("the item quantity is", item.quantity);
                       await editQuantity({
@@ -70,9 +79,9 @@ export default function Cart({ product }) {
                     +
                   </button>
                 </div>
-                <h3 class="absolute right-5">${item.products.price}.00</h3>{" "}
+                <h3 class="flex justify-end mr-4">${item.products.price}.00</h3>{" "}
                 <button
-                  class="text-red-600"
+                  class="flex justify-end mr-4 text-red-600 m-4 border p-2 rounded-full hover:bg-black"
                   onClick={async (e) => {
                     e.preventDefault();
                     await deleteItem({
@@ -89,14 +98,14 @@ export default function Cart({ product }) {
         })}
       </div>
       <div>
-        <h4 class="absolute right-5">
+        <h4 class="absolute right-32 text-pblue text-2xl">
           Total: $
           {(cart.total = cart.total + Math.floor(cart.total * 0.0925) / 2)}
         </h4>
       </div>
       <div class="mr-auto">
         <button
-          class="bg-red-700"
+          class="bg-red-700 p-2 m-2 rounded-full"
           onClick={async (e) => {
             navigate("/checkout");
           }}
@@ -104,7 +113,7 @@ export default function Cart({ product }) {
           Checkout
         </button>
         <button
-          class="bg-black"
+          class="bg-black p-2 m-2 rounded-full"
           onClick={async (e) => {
             navigate("/products");
           }}
