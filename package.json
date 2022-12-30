@@ -35,7 +35,8 @@
     "react": "^18.2.0",
     "react-router-dom": "^6.4.4",
     "reactdom": "^2.0.0",
-    "vite": "^3.2.4"
+    "tw-elements": "^1.0.0-alpha13",
+    "vite": "^3.2.5"
   },
   "bugs": {
     "url": "https://github.com/LunchBoxBandits/graceShopper/issues"

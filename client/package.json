@@ -12,7 +12,6 @@
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
     "@fontsource/public-sans": "^4.5.11",
-    "@google-pay/button-react": "^3.0.0",
     "@mui/icons-material": "^5.10.16",
     "@mui/joy": "^5.0.0-alpha.57",
     "@mui/material": "^5.10.17",
